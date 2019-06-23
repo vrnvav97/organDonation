@@ -103,12 +103,22 @@ li {
 	font-weight: 300;
   padding-left: 37px;
   padding-right: 37px;
-  padding-top: 55px;
+  padding-top: 10px;
   transition: opacity .5s ease, -webkit-transform .5s ease;
   transition: opacity .5s ease, transform .5s ease;
   transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
 }
-
+.message
+{
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 37px;
+  padding-top:10px;
+  padding-right: 37px;
+  transition: opacity .5s ease, -webkit-transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease;
+  transition: opacity .5s ease, transform .5s ease, -webkit-transform .5s ease;
+}
 .form-signin-left {
   -webkit-transform: translateX(-400px);
           transform: translateX(-400px);
@@ -185,7 +195,8 @@ li {
 
 .form-signin input, .form-signup input {
   color: #ffffff;
-  font-size: 13px;
+  background-color: #0F4FE6;
+  font-size: 1.5em;
 }
 
 .form-styling {
@@ -370,7 +381,7 @@ a.btn-signup:hover, a.btn-signin:hover {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  padding-top: 24px;
+  padding-top: 10px;
   margin-top: -535px;
   border-top: solid 1px rgba(255,255,255,.3);
   transition: all 0.5s ease;
