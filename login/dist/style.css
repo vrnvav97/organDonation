@@ -2,6 +2,7 @@ html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
 
 body {
   background:url(background.jpg) no-repeat center center fixed ;
+  /*linear-gradient( #B3E5FC, #fff),*/
   background-size: cover;
 }
 
