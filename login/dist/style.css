@@ -1,11 +1,7 @@
 html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
 
 body {
-  background:
-    linear-gradient(
-    #B3E5FC,
-    #fff),
-    url(https://dl.dropboxusercontent.com/u/22006283/preview/codepen/sky-clouds-cloudy-mountain.jpg) no-repeat center center fixed;
+  background:url(background.jpg) no-repeat center center fixed ;
   background-size: cover;
 }
 
