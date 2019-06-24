@@ -30,3 +30,6 @@ $(function() {
   $(".forgot").toggleClass("forgot-fade");
 	});
 });
+
+var password = document.querySelector ("form-styling");
+console.log(password);
