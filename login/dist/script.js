@@ -31,5 +31,10 @@ $(function() {
 	});
 });
 
-var password = document.querySelector ("form-styling");
+var pass = document.querySelector (".password");
 console.log(password);
+if (pass.length < 6 || pass.length>12)
+{
+  console.log("Executed this");
+alert("Password criteria doesn't matches");
+}
