@@ -67,7 +67,7 @@ background-color: transparent;}
 -webkit-line-clamp: 3;-webkit-box-orient: vertical; height: 3em;line-height: 22px;text-overflow: ellipsis;}
 .abtbg{background: url(../images/bg.png) repeat;}
 .abtbgclr{background-color: rgba(239, 208, 179, 0.23); border-bottom: 2px solid #2d7ab1;}
-.asbuttext{font-size: 15px;color: #1b1b1b; text-align: justify;line-height: 26px;margin-bottom: 24px;}
+.asbuttext{font-size: 18px;color: #1b1b1b; text-align: justify;line-height: 26px;margin-bottom: 24px;}
 .abtbtn{background: #fff; border: 1px solid #4a3358; padding: 0px 15px; color: #4a3358; font-size: 17px;  margin-left: 3px;}
 .abtbtn:hover{background: #efe2d7;}
 /*********************Event/News Section Classes**********************/
