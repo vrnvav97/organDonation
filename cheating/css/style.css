@@ -71,7 +71,7 @@ background-color: transparent;}
 .abtbtn{background: #fff; border: 1px solid #4a3358; padding: 0px 15px; color: #4a3358; font-size: 17px;  margin-left: 3px;}
 .abtbtn:hover{background: #efe2d7;}
 /*********************Event/News Section Classes**********************/
-.highlights{background-image: url(../images/events.jpg); height: auto;background-position: right top, left top; background-repeat:repeat; object-position:center; object-fit: contain; width: 100%; padding-top: 18px; padding-bottom: 18px;}
+.highlights{/*background-image: url(../images/events.jpg)*/ background-color: #383838; height: auto;background-position: right top, left top; background-repeat:repeat; object-position:center; object-fit: contain; width: 100%; padding-top: 18px; padding-bottom: 18px;}
 .iconbg{background-image: url(../images/events.jpg); height: auto;background-position: right top, left top; background-repeat:repeat; object-position:center; object-fit: contain; width: 100%; padding-top: 30px;padding-bottom: 30px;}
 .evnttab {background: #2d7ab1; padding: 4px; font-size: 25px;text-align: center;color: white;margin: 0px;}
 .evntsec {border: 1px solid #fbf7f3; background: #fff;}
