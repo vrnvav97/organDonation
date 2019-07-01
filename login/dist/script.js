@@ -38,3 +38,15 @@ if (pass.length < 6 || pass.length>12)
   console.log("Executed this");
 alert("Password criteria doesn't matches");
 }
+
+
+function check()
+{
+  console.log("never called");
+  document.getElementById("error").innerHTML = "**Check";
+}
+
+function clearMethod()
+{
+  document.getElementById("error").innerHTML = "";
+}
