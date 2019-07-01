@@ -1098,3 +1098,14 @@
 	-webkit-transform: translate3d(0, -50%, 0);
 	transform: translate3d(0, -50%, 0);
 }
+
+select
+{
+	width: 200px;
+	color: #DDE2E2;
+	background-color: #000;
+	border-radius: 30px;
+	padding: 10px;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
