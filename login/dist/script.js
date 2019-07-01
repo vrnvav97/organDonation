@@ -30,3 +30,26 @@ $(function() {
   $(".forgot").toggleClass("forgot-fade");
 	});
 });
+<<<<<<< HEAD
+=======
+
+var pass = document.querySelector (".password");
+console.log(password);
+if (pass.length < 6 || pass.length>12)
+{
+  console.log("Executed this");
+alert("Password criteria doesn't matches");
+}
+
+
+function check()
+{
+  console.log("never called");
+  document.getElementById("error").innerHTML = "**Check";
+}
+
+function clearMethod()
+{
+  document.getElementById("error").innerHTML = "";
+}
+>>>>>>> f98bc6ddb2910667b388ef1b86a9a368d2cdbd7d

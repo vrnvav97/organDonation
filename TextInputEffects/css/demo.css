@@ -46,7 +46,7 @@ a:hover, a:focus {
 
 .content h2 {
 	margin: 0 0 2em;
-	opacity: 0.1;
+
 }
 
 .content p {
@@ -61,7 +61,7 @@ a:hover, a:focus {
 .bgcolor-4 { background: #2f3238; color: #fff; }
 .bgcolor-5 { background: #df6659; color: #521e18; }
 .bgcolor-6 { background: #2fa8ec; color: #fff;}
-.bgcolor-7 { background: #d0d6d6; }
+.bgcolor-7 { background: #bcf7f7; }
 .bgcolor-8 { background: #3d4444; color: #fff; }
 .bgcolor-9 { background: #8781bd; color: #fff; }
 .bgcolor-10 { background: #6C6C6C; }
