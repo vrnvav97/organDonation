@@ -447,7 +447,7 @@
 	width: 100%;
 	background: #fff;
 	box-shadow: 0px 0px 0px 2px transparent;
-	color: #eca29b;
+	color: #ff0404;
 	-webkit-transition: box-shadow 0.3s;
 	transition: box-shadow 0.3s;
 }
@@ -514,7 +514,7 @@
 .input__label--yoko {
 	position: relative;
 	width: 100%;
-	color: #b04b40;
+	color: #000;
 	text-align: left;
 }
 
