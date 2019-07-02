@@ -4,6 +4,7 @@
     Author     : Nsignia
 --%>
 
+<%@page import="java.util.HashMap"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
@@ -107,19 +108,22 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
+      
+      
           <li><a id="home" href="indexxx.html">Home</a></li>
           <li><a id="home" href="#">Become a donor</a></li>
 
-
+          
           
 
           <li class="dropdown"> <a id="about" class="dropdown-toggle" data-toggle="dropdown" href="#">Donate<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Eye</a></li>
-              <li><a href="#">Heart</a></li>
-              <li><a  href="#">Liver</a></li>
-        <li><a href="#">Kidney</a></li>
-        <li><a href="#">Lungs</a></li>
+              <li><a href="Eye.jsp">Eye</a></li>
+              <li><a href="Heart.jsp">Heart</a></li>
+              <li><a  href="Liver.jsp">Liver</a></li>
+        <li><a href="Kidney.jsp">Kidney</a></li>
+        <li><a href="Lungs.jsp">Lungs</a></li>
+        <li><a href="Blood.jsp">Blood</a></li>
             </ul>
           </li>
 
@@ -162,8 +166,22 @@
 
           <!-- <li><a id="faculty" href="faculty.aspx">Faculty</a></li> -->
 
-
-          <li><a id="gal" href="indexLogin.jsp">Login</a></li>
+<%
+    String m,href;
+        if (session.getAttribute("userDetails") == null)
+        {
+             m = "Login";
+             href = "indexLogin.jsp";
+        }
+        else
+        {
+            HashMap<String,String> hm = (HashMap)session.getAttribute("userDetails");
+             m = hm.get("username");
+             href = "profile.jsp";
+        }
+        %>    
+          <li><a id="gal" href=<%=href%>><%=m%></a></li>
+        
           <li><a id="almni" href="#" >About Us</a></li>
         </ul>
       </div>

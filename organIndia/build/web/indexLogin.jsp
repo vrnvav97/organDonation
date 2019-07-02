@@ -34,18 +34,15 @@
     <div ng-app ng-init="checked = false">
 
 
-        <%
-            String msg = "hello world";
-            String m =String.valueOf( session.getAttribute (msg));
-            if (m != null)
-            {
-                %>
-                
-      <div class="message"><label for="username" ><%=m%></label></div>
-      <% 
-          session.setAttribute (msg,null);
-          }
-          %>
+<!--        <%
+            //tring msg = "hello world";
+//            String m =String.valueOf( session.getAttribute (msg));
+//            if (m != null)
+//            {
+//                %>
+                -->
+      <div class="message"><label for="username" ><</label></div>
+      
 
 
             <form class="form-signin" action="LoginServlet" method="post" name="form">
@@ -61,17 +58,10 @@
           </div>
          <!--  <a id="refresh" value="Refresh" onClick="history.go()"><img src="left-arrow.png" style="max-width: 35px" ></a> -->
 				        </form>
-        <% 
-            System.out.println ("username " + request.getParameter("username"));
-            System.out.println ("password " + request.getParameter("password"));
-            session.setAttribute("username", request.getParameter("username"));
-            session.setAttribute("password",request.getParameter("password"));
-            %>
-      
 
 
-				        <form class="form-signup" action="" method="post" name="form">
-          <label for="fullname">Full name</label>
+				        <form class="form-signup" action="SignUp" method="post" name="form">
+          <label for="name">Full name</label>
           <input class="form-styling" type="text" name="fullname" placeholder=""/>
           <label for="email">Email</label>
           <input class="form-styling" type="text" name="email" placeholder=""/>
