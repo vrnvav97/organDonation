@@ -9,7 +9,7 @@
 <!-- 
 <meta name="keywords" content="St.Joseph School in Gorakhnath, CISCE board affiliated School, Best Education school in Gorakhpur, India's Best Education center"/>
 <meta name="description" content="St. Joseph's School Gorakhnath founded on 23rd February'2001, Top School in india, Best school for education in gorakhpur, India's Top ranked school in Gorakhpur, Uttar pradesh Top Education School, Great atmosphere School in Uttar Pradesh, One of the best teaching center in Gorakhpur, The most disciplined school of Uttar Pradesh"/>-->
-<link rel="icon" href="images/fav.ico" type="image/x-icon" />
+<link rel="icon" href="cheating/images/fav.ico" type="image/x-icon" />
  
 
 
@@ -19,9 +19,9 @@
 
 
 
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="css/font-awesome.min.css" type="text/css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet" type="text/css" />
+<link href="cheating/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="cheating/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+<link href="cheating/css/style.css" rel="stylesheet" type="text/css" />
 
 
 
@@ -102,7 +102,7 @@
 
       <div class="navbar-header"> 
 
-        <a href="#"><img src="images/logo.png" alt="Donate India" class="img-responsive center-block" style="margin-left: 10px;margin-top: 10px;max-width: 40%"></a>
+        <a href="#"><img src="cheating/images/logo.png" alt="Donate India" class="img-responsive center-block" style="margin-left: 10px;margin-top: 10px;max-width: 40%"></a>
 
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -221,9 +221,9 @@
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active"> <img src="images/sld1.jpg" alt="stjhsg" width="100%"> </div>
-      <div class="item"> <img src="images/sld2.jpg" alt="stjhsg" width="100%"> </div>
-      <div class="item"> <img src="images/sld3.jpg" alt="stjhsg"  width="100%"> </div>
+      <div class="item active"> <img src="cheating/images/sld1.jpg" alt="stjhsg" width="100%"> </div>
+      <div class="item"> <img src="cheating/images/sld2.jpg" alt="stjhsg" width="100%"> </div>
+      <div class="item"> <img src="cheating/images/sld3.jpg" alt="stjhsg"  width="100%"> </div>
       <!-- <div class="item"> <img src="images/sld4.jpg" alt="stjhsg"  width="100%"> </div> -->
       <!-- <div class="item"> <img src="images/sld5.jpg" alt="stjhsg"  width="100%"> </div> -->
       <!-- <div class="item"> <img src="images/sld6.jpg" alt="stjhsg"  width="100%"> </div> -->
@@ -267,7 +267,7 @@
           <button type="button" class="btn btn-danger btn-circle-news"> <i class="fa fa-chevron-right" aria-hidden="true"></i> </button>
           </a></div> -->
 
-          <img src="images/organ1.jpg">
+          <img src="cheating/images/organ1.jpg">
 
       </div>
     </div> 
@@ -304,31 +304,31 @@
        <div class="school-part2">
         <center>
           <!-- <a href="early-childhood-developement.aspx"><img src="images/icons/developmen.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
-          <img src="images/flat/128e.png" style="color: white">
+          <img src="cheating/images/flat/128e.png" style="color: white">
         </center>
         <a href="early-childhood-developement.aspx" style="color: white">Eye</a> </div>
       <div class="school-part2">
         <center>
           <!-- <a href="junior-school.aspx"><img src="images/icons/junior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
-          <img src="images/flat/128h.png">
+          <img src="cheating/images/flat/128h.png">
         </center>
         <a href="junior-school.aspx" style="color: white">Heart</a> </div>
       <div class="school-part2">
         <center>
          <!--  <a href="middle-school.aspx"><img src="images/icons/middle.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
-         <img src="images/flat/128l.png">
+         <img src="cheating/images/flat/128l.png">
         </center>
         <a href="middle-school.aspx" style="color: white">Liver</a> </div>
       <div class="school-part2">
         <center>
           <!-- <a href="senior-school.aspx"><img src="images/icons/senior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
-          <img src="images/flat/128k.png">
+          <img src="cheating/images/flat/128k.png">
         </center>
         <a href="senior-school.aspx" style="color: white">Kidney</a> </div>
       <div class="school-part2">
         <center>
           <!-- <a href="learning-center.aspx"><img src="images/icons/learning.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
-          <img src="images/flat/128ll.png">
+          <img src="cheating/images/flat/128ll.png">
         </center>
         <a href="learning-center.aspx" style="color: white">Lungs</a> </div>
         </div>
@@ -353,7 +353,7 @@
 
 
 <div class="graph">
-  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js"></script> 
+  <script type="cheating/text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js"></script> 
 <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"organ donation","geo":"IN","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=IN&q=organ%20donation","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
 </div>
 <!-------------- icons Section --------------->
