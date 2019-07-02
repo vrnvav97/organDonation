@@ -35,7 +35,19 @@
 
 
 <!-- <style type="text/css">#home{color: #70b50c;}</style> -->
-
+<style type="text/css">
+  iframe{
+    min-height: 500px;
+  }
+  iframe .fe-line-chart-legend-text
+  {
+    font-weight: bold;
+  }
+  iframe .embed-logo
+  {
+    display: none;
+  }
+</style>
 
 </head>
 <body>
@@ -98,7 +110,7 @@
 
       <div class="navbar-header"> 
 
-        <a href="#"><img src="cheating/images/logo.png" alt="Donate India" class="img-responsive center-block" style="margin-left: 10px;margin-top: 10px;max-width: 40%"></a>
+        <a href="#"><img src="images/logo.png" alt="Donate India" class="img-responsive center-block" style="margin-left: 10px;margin-top: 10px;max-width: 40%"></a>
 
 
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
@@ -108,24 +120,22 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-      
-      
           <li><a id="home" href="indexxx.html">Home</a></li>
           <li><a id="home" href="#">Become a donor</a></li>
 
-          
+
           
 
           <li class="dropdown"> <a id="about" class="dropdown-toggle" data-toggle="dropdown" href="#">Donate<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="Eye.jsp">Eye</a></li>
-              <li><a href="Heart.jsp">Heart</a></li>
-              <li><a  href="Liver.jsp">Liver</a></li>
-        <li><a href="Kidney.jsp">Kidney</a></li>
-        <li><a href="Lungs.jsp">Lungs</a></li>
-        <li><a href="Blood.jsp">Blood</a></li>
+              <li><a href="#">Eye</a></li>
+              <li><a href="#">Heart</a></li>
+              <li><a  href="#">Liver</a></li>
+        <li><a href="#">Kidney</a></li>
+        <li><a href="#">Lungs</a></li>
             </ul>
           </li>
+
 
 
 <!-- 
@@ -180,9 +190,9 @@
              href = "profile.jsp";
         }
         %>    
-          <li><a id="gal" href=<%=href%>><%=m%></a></li>
-        
-          <li><a id="almni" href="#" >About Us</a></li>
+         
+          <li><a id="gal" href="../login/dist/index.html">Login</a></li>
+          <!-- <li><a id="almni" href="#" >About Us</a></li> -->
         </ul>
       </div>
     </div>
@@ -193,13 +203,15 @@
 
 
 
+
+
 <div class="container-fluid scroolbg">
     <div class="container">
 
 
         <div class="col-md-12">
   <marquee scrollamount="8" scrolldelay="30" direction="left" align="left" onmouseover="stop();" onmouseout="start();">
-            <p>Lungs donation Needed!!! &nbsp;<a href='admin/News/15.pdf' target='_blank' class='att'><i class='fa fa-paperclip' aria-hidden='true'></i></a>&nbsp; I &nbsp;&nbsp;</p>
+            
        </marquee>
              </div>
 
@@ -220,21 +232,23 @@
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active"> <img src="cheating/images/sld1.jpg" alt="stjhsg" width="100%"> </div>
-      <div class="item"> <img src="cheating/images/sld2.jpg" alt="stjhsg" width="100%"> </div>
-      <div class="item"> <img src="cheating/images/sld3.jpg" alt="stjhsg"  width="100%"> </div>
+      <div class="item active"> <img src="images/sld1.jpg" alt="stjhsg" width="100%"> </div>
+      <div class="item"> <img src="images/sld2.jpg" alt="stjhsg" width="100%"> </div>
+      <div class="item"> <img src="images/sld3.jpg" alt="stjhsg"  width="100%"> </div>
       <!-- <div class="item"> <img src="images/sld4.jpg" alt="stjhsg"  width="100%"> </div> -->
       <!-- <div class="item"> <img src="images/sld5.jpg" alt="stjhsg"  width="100%"> </div> -->
       <!-- <div class="item"> <img src="images/sld6.jpg" alt="stjhsg"  width="100%"> </div> -->
     </div></div>
 </div>
-<div class="thought">
+
+
+<!-- <div class="thought">
   <div class="container">
     <div class="row">
       <h4>Medical Emergency!!! </h4>
     </div>
   </div>
-</div>
+</div> -->
 <!-- Body Section Start --> 
 <!-------------- About School Section --------------->
 <div class="container-fluid abtbg">
@@ -242,14 +256,14 @@
    <div class="clr5"></div>
     <div class="container">        
     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-      <h1 class="orange text-left">About Donation</h1>
+      <h1 class="orange text-left" style="text-align: justify;">Know Something <br> About Donation</h1>
       <p class="asbuttext">A donation is a gift for charity, humanitarian aid, or to benefit a cause.Organ and blood can be donated.It can save one's life.Organ donation is the process of removing an organ from one person and surgically placing it in another person. Many organs can be donated. Donations include the liver, kidney, pancreas, and heart. </p>
-    <a href="aboutus-history.aspx">  <button type="button" class="abtbtn">Read More</button>  </a>
+<!--     <a href="aboutus-history.aspx">  <button type="button" class="abtbtn">Read More</button>  </a> -->
       <div class="clr5"></div>
       </div>       
       <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <div class="evntsec">
-        <h3 class="evnttab">Latest News</h3>
+       <!--  <h3 class="evnttab">Latest News</h3>
         <marquee scrollamount="2" scrolldelay="30" direction="up" align="left" onmouseover="stop();" onmouseout="start();" class="marrspns">
        
             <div class='news-area'><div class='row'><div class='col-md-10'><h4>FEE STRUCTURE </h4></div><div class='col-md-2'> <a href='admin/News/15.pdf' target='_blank'> <i class='fa fa-paperclip green' aria-hidden='true'></i> </a></div></div><p>FEE STRUCTURE</p></div><hr>
@@ -257,27 +271,40 @@
             
 
         </marquee>
-        <div class="clr15"></div>
+
+
+         <div class="clr15"></div>
         <div class="newsbtn-position"> <a href="latest-news.aspx">
           <button type="button" class="btn btn-danger btn-circle-news"> <i class="fa fa-chevron-right" aria-hidden="true"></i> </button>
-          </a> </div>
+          </a></div> -->
+
+          <img src="images/organ1.jpg">
+
       </div>
     </div> 
+
+
     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
       <div class="evntsec">
-        <h3 class="row evnttab">Upcoming Events</h3>
+
+
+        <h3 class="row evnttab">Planned Events</h3>
         <marquee scrollamount="2" scrolldelay="30" direction="up" align="left" onmouseover="stop();" onmouseout="start();" class="marrspns">
       
             <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 fullwidth text-center'><h3 style='Color: #000'>Coming Soon</h3><p></div>
               
         </marquee>
         <div class="clr15"></div>
-        <div class="newsbtn-position"> <a href="school-event.aspx">
+        <!-- <div class="newsbtn-position"> <a href="school-event.aspx">
           <button type="button" class="btn btn-danger btn-circle-news"> <i class="fa fa-chevron-right" aria-hidden="true"></i> </button>
-          </a> </div>
+          </a> </div> -->
+
+
       </div>
       <div class="clr5"></div>
     </div>
+
+
     </div>
   </div>
 </div>
@@ -287,81 +314,61 @@
       <div class="container">
        <div class="school-part2">
         <center>
-          <a href="early-childhood-developement.aspx"><img src="images/icons/developmen.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a>
+          <!-- <a href="early-childhood-developement.aspx"><img src="images/icons/developmen.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
+          <img src="images/flat/128e.png" style="color: white">
         </center>
-        <a href="early-childhood-developement.aspx">Education</a> </div>
+        <a href="early-childhood-developement.aspx" style="color: white">Eye</a> </div>
       <div class="school-part2">
         <center>
-          <a href="junior-school.aspx"><img src="images/icons/junior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a>
+          <!-- <a href="junior-school.aspx"><img src="images/icons/junior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
+          <img src="images/flat/128h.png">
         </center>
-        <a href="junior-school.aspx">Junior School</a> </div>
+        <a href="junior-school.aspx" style="color: white">Heart</a> </div>
       <div class="school-part2">
         <center>
-          <a href="middle-school.aspx"><img src="images/icons/middle.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a>
+         <!--  <a href="middle-school.aspx"><img src="images/icons/middle.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
+         <img src="images/flat/128l.png">
         </center>
-        <a href="middle-school.aspx">Middle School</a> </div>
+        <a href="middle-school.aspx" style="color: white">Liver</a> </div>
       <div class="school-part2">
         <center>
-          <a href="senior-school.aspx"><img src="images/icons/senior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a>
+          <!-- <a href="senior-school.aspx"><img src="images/icons/senior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
+          <img src="images/flat/128k.png">
         </center>
-        <a href="senior-school.aspx">Senior School</a> </div>
+        <a href="senior-school.aspx" style="color: white">Kidney</a> </div>
       <div class="school-part2">
         <center>
-          <a href="learning-center.aspx"><img src="images/icons/learning.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a>
+          <!-- <a href="learning-center.aspx"><img src="images/icons/learning.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
+          <img src="images/flat/128ll.png">
         </center>
-        <a href="learning-center.aspx">Learning</a> </div>
+        <a href="learning-center.aspx" style="color: white">Lungs</a> </div>
         </div>
 </div>
-<!-------------- School Administrator Section --------------->
-<div class="container-fluid abtbg">
-  <div class="row abtbgclr">
+<!-------------- Google trends Section --------------->
+
+
+<div class="container-fluid scroolbg">
     <div class="container">
-      <div class="clr5"></div>
-      <h1 class="orange">Administrators</h1>
-      <div class="clr"></div>
-      <div>
-          <p>
+
+
+        <div class="col-md-12">
+  <marquee scrollamount="8" scrolldelay="30" direction="left" align="left" onmouseover="stop();" onmouseout="start();">
+            
+       </marquee>
+             </div>
+
+
+</div>
+</div>
 
 
 
-
-
-
-
-
-          </p>
-      </div>
-     <!--  <div class="school-part"><img src="images/admin/1.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rt. Rev. Bp. <br/> Dominic Kokkat CST</p>
-        <p class="admin"> (Bp.Emeritus Of Gorakhpur) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/2.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Bp. Thomas <br/> Thuruthimattam CST </p>
-        <p class="admin"> (Bishop Of GKP) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/3.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr. Benny K.K. </p>
-        <p class="admin"> (Secretary Catholic Diocese of GKP Education society) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/4.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr. <br/> Sibi Joseph </p>
-        <p class="admin"> (Manager) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/5.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr. <br/> Jose Kokkandathil</p>
-        <p class="admin"> (Principal) </p>
-      </div>
-
-      <div class="school-part"><img src="images/admin/6.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr.  <br/>Mathews Mankuthel</p>
-        <p class="admin"> Vice Principal </p>
-      </div> -->
-      <div class="clr5"></div>
-    </div>
-  </div>
+<div class="graph">
+  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js"></script> 
+<script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"organ donation","geo":"IN","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=IN&q=organ%20donation","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
 </div>
 <!-------------- icons Section --------------->
-<div class="container-fluid iconbg">
+<!-- <div class="container-fluid iconbg">
   <div class="container">
     <div class="row">
       <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
@@ -371,8 +378,8 @@
             <p class="greencir">Fee Structure 2017-2018</p>
             <a href="fee-structure.aspx" class="boticon"> Read More </a></div>
         </div>
-      </div>
-      <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+      </div> -->
+      <!-- <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
         <div class="row">
           <div class="col-xs-12 col-lg-5"><img src="images/icons/passing.png" class="img-responsive center-block" alt="St. Joseph, Goraknath"/></div>
           <div class="col-xs-12 col-lg-7 textcenter">
@@ -398,9 +405,9 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-------------- Gallery Section --------------->
-<div class="container-fluid abtbgclr">
+<!-- <div class="container-fluid abtbgclr">
  <div class="container">
   <div class="clr5"></div>
   <div class="col-xs-12 col-md-12 col-lg-8">
@@ -415,19 +422,19 @@
           </a>
         </center>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="row">
         <div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/26//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>BISHOP BIRTHDAY ....</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/28//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>INITIATION CEREMONY</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/27//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>PRINCIPAL FEAST DAY</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/23//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>Lumbini Trip</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/24//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>Republic Day Cel....</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/25//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>Class 12th Farew....</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/22//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>DESTELLOS 2018</h5></center></div><div class='col-xs-6 col-sm-3 col-md-3 col-lg-3 galgrid'><a href='gallery.aspx'><center><img src=Admin/Pic/21//1.jpg class='grow img-responsive gallery img-thumbnail'  alt='St. Joseph, Goraknath'/></center></a><center><h5>INTER SCHOOL GAMES</h5></center></div>
    
     </div> -->
-    <div class="col-xs-12 col-md-4 col-lg-3 galview visible-xs">
+    <!-- <div class="col-xs-12 col-md-4 col-lg-3 galview visible-xs">
       <center>
         <a href="gallery.aspx">
         <button class="abtbtn">Read More</button>
         </a>
       </center>
     </div>
-  </div>
+  </div> -->
   <!-- <div class="col-xs-12 col-md-12 col-lg-4" style=" background: white;">
     <div class="row">
       <center>
@@ -442,43 +449,50 @@
         
       </div> 
     </div>  -->
-  </div>
+
+
+
+  <!-- </div>
   <div class="clr5"></div>
 </div>
-</div>
+</div> -->
+
+
+
+
+
 <!-- Footer Start -->
 
 <div id="footer">
   <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14247.560038591304!2d83.3529241!3d26.7797758!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x27cf89de4d08c25c!2sSt.+Joseph&#39;s+School!5e0!3m2!1sen!2sin!4v1510553675269" width="100%" height="200" frameborder="0" style="border:0" allowfullscreen></iframe> -->
-  <div class="container-fluid footertop" id="contact">
+  <div class="container-fluid footertop" id="contact" style="padding-bottom: 25px;">
     <div class="container">
         <div class="col-sm-6 col-md-8">
                <h2>Connect with us</h2>
-      <p class="footertxt">Address : St.Joseph's School,  Gorakhnath P.O, Gorakhpur-273015</p>
-      <p class="footertxt"> <i class="fa fa-phone" aria-hidden="true"></i> &nbsp; 0551-2251504 &nbsp; <i class="fa fa-envelope-o" aria-hidden="true"></i> <a class="toptxt" href="mailto: sjsgknath@yahoo.co.in"> &nbsp;  sjsgknath@yahoo.co.in, </a> <a class="toptxt" href="mailto: sjsgknath@gmail.com"> &nbsp;  sjsgknath@gmail.com </a> </p>
+      <!-- <p class="footertxt">Address : St.Joseph's School,  Gorakhnath P.O, Gorakhpur-273015</p> -->
+      <p class="footertxt"><!--  <i class="fa fa-phone" aria-hidden="true"></i> &nbsp; 0551-2251504 &nbsp;  --><i class="fa fa-envelope-o" aria-hidden="true"></i> <a class="toptxt" href="mailto: sjsgknath@yahoo.co.in"> &nbsp;  anshumanbhatt1997@gmail.com, </a> <a class="toptxt" href="mailto: sjsgknath@gmail.com"> &nbsp;  varun.vns97@gmail.com </a> </p>
     
         </div>
-<div class="col-sm-6 col-md-4 app-left-space tb-pad-10">
+<!-- <div class="col-sm-6 col-md-4 app-left-space tb-pad-10"> -->
         <!-- <div class="row"> <img src="images/Mobile-slides.png" class="img-responsive appdownload center-block"> -->
           <!-- <h3 class="apphead">Download  App</h3> -->
           <!-- <a href="https://itunes.apple.com/in/app/campuscare/id1034721587?platform=ipad&amp;preserveScrollPosition=true#platform/ipad" target="_blank"> <img src="images/ios.png" width="100px" class="img-responsive" style="margin-bottom:10px"> </a> <a href="https://play.google.com/store/apps/details?id=com.campuscare.entab.ui" target="_blank"> <img src="images/android.png" width="100px" class="img-responsive"> </a> -->
           <!-- <h5><b>Use URL: </b>sjscampuscare.in</h5> -->
         <!-- </div> -->
-      </div>
+      <!-- </div> -->
    
+    <!-- 
     
-    
-    </div>
-    <div class="clr"></div>
+    </div>    <div class="clr"></div>
   </div>
   <div class="container-fluid footer">
     <p class="text-muted footertxt">© Copyright 2017 by Donate India &nbsp; | &nbsp; Created By <a class="boticon" href="http://www.entab.in/" target="_blank"> Varun and Anshuman </a></p>
   </div>
-</div>
-<script type="text/javascript" src="cheating/js/jquery-3.2.1.js"></script> 
-    <script type="text/javascript" src="cheating/js/jquery-1.9.1.min.js"></script> 
+</div> -->
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script> 
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
 
-<script type="text/javascript" src="cheating/js/bootstrap.min.js"></script> 
+<script type="text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
