@@ -48,7 +48,7 @@
 .input__label-content {
 	position: relative;
 	display: block;
-	padding: 1.6em 0;
+	padding: 2.0em 0;
 	width: 100%;
 }
 
@@ -76,7 +76,7 @@
 	padding: 0.4em 0.25em;
 	width: 100%;
 	background: transparent;
-	color: #AFB5BB;
+	color: #000;
 	font-size: 1.55em;
 }
 
@@ -447,7 +447,7 @@
 	width: 100%;
 	background: #fff;
 	box-shadow: 0px 0px 0px 2px transparent;
-	color: #eca29b;
+	color: #ff0404;
 	-webkit-transition: box-shadow 0.3s;
 	transition: box-shadow 0.3s;
 }
@@ -514,7 +514,7 @@
 .input__label--yoko {
 	position: relative;
 	width: 100%;
-	color: #b04b40;
+	color: #000;
 	text-align: left;
 }
 
@@ -1097,4 +1097,15 @@
 	opacity: 0;
 	-webkit-transform: translate3d(0, -50%, 0);
 	transform: translate3d(0, -50%, 0);
+}
+
+select
+{
+	width: 200px;
+	color: #DDE2E2;
+	background-color: #000;
+	border-radius: 30px;
+	padding: 10px;
+	font-weight: bold;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
