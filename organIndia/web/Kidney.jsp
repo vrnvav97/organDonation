@@ -12,7 +12,7 @@
         <title>Kidney</title>
     </head>
     <body>
-     <a href="indexForm.jsp" value="Donate Kidney"><button>Donate Kidney</button></a>
+     <a href="index1.jsp" value="Donate Kidney"><button>Donate Kidney</button></a>
         
     </body>
 </html>

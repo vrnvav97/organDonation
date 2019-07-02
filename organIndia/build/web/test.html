@@ -1,11 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : Jun 26, 2019, 1:14:04 AM
-    Author     : Nsignia
---%>
 
-<%@page import="java.util.HashMap"%>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 
@@ -15,9 +8,7 @@
 <title>Donate India</title>
 
 
-<!-- 
-<meta name="keywords" content="St.Joseph School in Gorakhnath, CISCE board affiliated School, Best Education school in Gorakhpur, India's Best Education center"/>
-<meta name="description" content="St. Joseph's School Gorakhnath founded on 23rd February'2001, Top School in india, Best school for education in gorakhpur, India's Top ranked school in Gorakhpur, Uttar pradesh Top Education School, Great atmosphere School in Uttar Pradesh, One of the best teaching center in Gorakhpur, The most disciplined school of Uttar Pradesh"/>-->
+
 <link rel="icon" href="cheating/images/fav.ico" type="image/x-icon" />
  
 
@@ -31,57 +22,14 @@
 <link href="cheating/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="cheating/css/font-awesome.min.css" type="text/css" rel="stylesheet">
 <link href="cheating/css/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
 
 
-<!-- <style type="text/css">#home{color: #70b50c;}</style> -->
 
 
 </head>
 <body>
-
-
-<!-- 
-<form name="form1" method="post" action="./" id="form1">
-
-
-<div>
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4QS83tRUZXh0BcQDPGRpdiBpZD0nbXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.109773641sCGGdgcm9sZT0nZGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.109773641VEt.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.109773641c+PGJ1dHRvbiB0eXBlPSdidXR0b24nIGNsYXNzPSdjbG9zZScgZGF0YS1kaXNtaXNzPSdtb2RhbCc+JnRpbWVzOzwvYnV0dG9uPjxoNCBjbGFzcz0nbW9kYWwtdGl0bGUnPlNVTU1FUiBWQUNBVElPTjwvaDQ+PC9kaXY+PGRpdiBjbGFzcz0nbW9kYWwtYm9keSc+PGltZyBzcmM9QWRtaW4vTm90aWZpY2F0aW9uLzE3LmpwZyBjbGFzcz0naW1nLNjvUhA1HFHkvo5cxPGPKQbjVZurQQS83t8+PGRpdiBjbGFzcz0ncGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.1097719ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGd.100148163.109773641.100148163.100148163.109773641.100148163.109773641.1001481639kaXY+IDwvZGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.1097719ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGd.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163JlZj0nYWRtaW4vTmV3cy8xNS5wZGYnIHRhcmdldD0nX2JsYW5rJyBjbGFzcz0nYXR0Jz48aSBjbGFzcz0nZmEQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4j0ndHJ1ZSc+PC9pPjwvYT4mbmJzcDsgSNcEH1C3UXSaTcNMHNLGNuLZqjGKbSrEMZNcGNJH8DuaLh.109773641.109773641.109773641ZRuj7py7jxuLh.109773641.109773641.109773641.109773641XLpcar1LRvdSKNcc+PGRpdiBjbGFzcz0ncm919ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.109773641VJFIDwvaDQ+PC9kaXY+PGRpdiBjbGFzcz0nY29sLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163Zr7Qe7aPiA8aSBjbGFzcz0nZmEQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4QS83tDlbj0ndHJ1ZSc+PC9pPiA8L2E+PC9kaXY+PC9kaXY+PHA+Re3js3W69CrMinNGtLdWyYrnnKzHR26vu4I+ZGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNc4cy0x9c087b3c48d05a992fefed0bf6185ba4b17d9e4aEwtXT6ixAMhK8zeuZNsCGGdjZW50ZXInPjxoMyBzdHlsZT0nQ29sb19ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsdj5kAg0PFgIfAAWeEDxkaXYgY2xhc3M9J2NvbC14cy02IGNvbC1zbS0zIGNvbC1tZC0zIGNvbC1sZy0zIGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5Cc+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.109773641VEt.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.109773641NcIGFsdD0nU3QuIEpvc2VwaCwgR29yYWtuYXRoJy8+PC9jZW50ZXI+PC9hPjxjZW50ZXI+PGg1PkJJU0hPUCBCSNcEH1C3UXSaTcNMHNLGNuLZqjGKbSrEMZNcGNJH8DuaLh.109773641.109773641.109773641ZRuj7py7jxuLh.109773641.109773641.109773641.1097736414TkgbS48bY5oWKkqoK20tLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163KQbjVZurQQS83t0ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5GFzcz0nZ19ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGdHR26vu410aHVtYm5haWwnICBhbHQ9J1N0LiBKb3NlcGgsIEdvcmFrbmF0aCcvPjwvY2Vj2khmccLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNc0tLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163KQbjVZurQQS83t0ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5GFzcz0nZ19ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGdHR26vu410aHVtYm5haWwnICBhbHQ9J1N0LiBKb3NlcGgsIEdvcmFrbmF0aCcvPjwvY2Vj2khmccLDDH1GxGcJxFPBN4bzMLPqVsp8Q0lQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4QS83tYKoihjAhXXqFuLS1xSspYHuaLh.100148163.100148163zeuZNsCGGdwtc20tLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163KQbjVZurQQS83t0ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5GFzcz0nZ19ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGdHR26vu410aHVtYm5haWwnICBhbHQ9J1N0LiBKb3NlcGgsIEdvcmFrbmF0aCcvPjwvY2Vj2khmccLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163Zr7Qe7aQhu5yRJV.100148163FuLS1xSs14cy02IGNvbC1zbS0zIGNvbC1tZC0zIGNvbC1sZy0zIGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5Cc+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.109773641VEt.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.109773641NcIGFsdD0nU3QuIEpvc2VwaCwgR29yYWtuYXRoJy8+PC9jZW50ZXI+PC9hPjxjZW50ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.1097719ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGd.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163rQQS83t2wtc20tLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163KQbjVZurQQS83t0ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5GFzcz0nZ19ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGdHR26vu410aHVtYm5haWwnICBhbHQ9J1N0LiBKb3NlcGgsIEdvcmFrbmF0aCcvPjwvY2Vj2khmccLNjvUhA1HFHkvo5cxPGPKQbjVZurQQS83tdx9nGGdqFuLS1xSsnDU+PC9jZW50ZXI+PC9kaXY+PGRpdiBjbGFzcz0nY29sLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4+PGEgaHJlZj0nZ2FsbGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.109773641VEt.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.1097736414TkgbS48bY5oWKkqoKYWx0PSNcEH1C3UXSaTcNMHNLGNuLZqjGKbSrEMZNcGNJH8DuaLh.109773641.109773641.1097736419ntE+PGNlbnRlcj48aDU+REQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4QS83tYKoihjAhXXqFuLS1xSspYHuaLh.100148163.100148163h.100148163cy02IGNvbC1zbS0zIGNvbC1tZC0zIGNvbC1sZy0zIGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcPSEWY5Cc+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.109773641VEt.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.109773641NcIGFsdD0nU3QuIEpvc2VwaCwgR29yYWtuYXRoJy8+PC9jZW50ZXI+PC9hPjxjZW50ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNc+PC9jZW50ZXI+PC9kaXY+ZAIPDxYCHwAFgg08ZGl2IGNsYXNzPSdpdGVtIGFjdGl2ZSc+PGRpdiBjbGFzcz0nY29sLXhzLTEyIGNvbC1zbS0x9c087b3c48d05a992fefed0bf6185ba4b17d9e4aRPVWFZL5iMn5PgXYVtDTL0JpcnRe3js3W69CrMinNGtLdWyYrnnKzHR26vu4cz0nZ3JvdyBpbWctcmVzcG9uc2l2ZSBiaXJ0aGRheScgYWx0PSNcEH1C3UXSaTcNMHNLGNuLZqjGKbSrEMZNcGNJH8DuaLh.109773641.109773641.109773641ZRuj7py7jxuLh.109773641.109773641.109773641.109773641BcF674KfWH48DuaLh.100148163jxjZW50ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.109773641VEt0ZXI+PGg1PkNsYXNzIC0gLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsB38s1sQf.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSstZC0xMiBjb2wtbGctMTInPjxjZW50ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNc0b19ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.1097736414TkgbS48bY5oWKkqoK1N0LiBKb3NlcGgsIEdvcmFrbmF0aCcvPjwvY2VudGVyPjxkaXYgY2xhc3M9J2Nscic+PC9kaXY+PGNlbnRlcj48aDU+QU5TSElLQSBZQURBVjwvaDU+PC9jZW50ZXI+PGNlbnRlcj48aDU+Q2xhc19ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641.1097719ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsl0ZW0nPjxkaXYgY2xhc3M9J2NvbC14cy0x9c087b3c48d05a992fefed0bf6185ba4b17d9e4aMic+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNc0aEQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4QS83tYKoihjAhXXqFuLS1xSspYH.1097736414TkgbS48bY5oWKkqoKD0nU3QuIEpvc2VwaCwgR29yYWtuYXRoJy8+PC9jZW50ZXI+PGRpdiBjbGFzcz0nY2xyJz48L2Re3js19ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsr1LRvdSKNch.109773641.109773641.109773641.109773641.109773641.109773641dx9n3t0ZXI+PGg1PkNsYXNzIC0gLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH48DuaLh.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.100148163.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSsB38s1sQf.10019ZWRxs5wXu8fnzi2oHAxu7sYKoihjAhXXqFuLS1xSstZC0xMiBjb2wtbGctMTInPjxjZW50ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNc0b3MvUzc0ND8ZkBLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4dh.1001481639J1N0LiBKb3NlcGgsIEdvcmFrbmF0aCcvPjwvY2VudGVyPjxkaXYgY2xhc3M9J2Nscic+PC9kaXY+PGNlbnRlcj48aDU+UklUSVNIQSBKQUlTV0FLNjvUhA1HFHkvo5cxPGPKQcwmVWnsiKnZ6VWN8hrtCM2BcF674KfWH4T+PC9jZW50ZXI+PGRpdiBjbGFzcz0nY2xyMic+PC9kaXY+PC9kaXY+PC9kaXY+PGRpdiBjbGFzcz0naXRlbSc+PGRpdiBjbGFzcz0nY29sLXhzLTEyIGNvbC1zbS0x9c087b3c48d05a992fefed0bf6185ba4b17d9e4aRPVWFZL5iMn5PgXYVtDTL0JpcnRoRGF5UGhvdG9zL1M0MjUyLmpwZyBjbGFzcz0nZ3JvdyBpbWctcmVzcG9uc2l2ZSBiaXJ0aGRheScgYWx0PSNcEH1C3UXSaTcNMHNLGNuLZqjGKbSrEMZNcGNJH8DuaLh.109773641.109773641.109773641ZRuj7py7jxuLh.109773641.109773641.109773641.109773641BcF674KfWH48DuaLh.100148163jxjZW50ZXI+PGdzVHQ4E7pvx6R98h7BXLpcar1LRvdSKNcjsf9ANBCtpYHvWauh.1097719ZWRxs5wXgEwtXT6ixAMhK8zeuZNsCGGd.100148163.109773641.100148163.100148163.109773641.100148163.109773641.100148163U+PC9jZW50ZXI+PGRpdiBjbGFzcz0nY2xyMic+PC9kaXY+PC9kaXY+PC9kaXY+ZGSTKWI8FgIK8mWzfd0ba0JNkKAWhxvuSIKgMO3bOuDu6w==" />
-</div>
-
-
-
-
-<div>
-  <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
-</div>
-
-
-
-<a href="http://www.sjscampuscare.in/" id="pportal" target="_blank"></a>
- -->
-
-
-
-<!--modal popup-->
-<!--     <div id='myModal' class='modal fade modalpopup' role='dialog'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal'>&times;</button><h4 class='modal-title'>SUMMER VACATION</h4></div><div class='modal-body'><img src=Admin/Notification/17.jpg class='img-responsive popup-cover' /><div class='pad-10'></div><p><strong>SUMMER VACATION</strong></p></div> </div> </div></div> 
-
-
-
-<audio autoplay>
-  <source src="images/All_Praise_to_Our_Redeeming_Lord.mp3" type="audio/mpeg">
-</audio>
-<div class="topsec">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-7 col-md-6 topbar" >
-           <a href="pdf/MedicalCertificate.pdf" target="_blank" class="toptxt">  Medical Fitness Certificate Format </a> I   </div>
-      <div class="col-xs-12 col-sm-5 col-md-6 topbar"> <a href="erp-software.aspx" class="toptxt"> School ERP Software </a> I <a href="parent-guidline.aspx" class="toptxt"> Parent Portal (Help?) </a> </div>
-    </div>
-  </div>
-</div>
- -->
-
 
 
 
@@ -126,61 +74,8 @@
         <li><a href="Blood.jsp">Blood</a></li>
             </ul>
           </li>
-
-
-<!-- 
-          <li class="dropdown"> <a id="adm" class="dropdown-toggle" data-toggle="dropdown" href="#">Admissison<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="admissison-kndergarten.aspx">Kindergarten</a></li>
-        <li><a href="admissison-class-I-X.aspx">Class I – X</a></li>
-              <li><a href="admissison-inter.aspx">Inter School</a></li>
-            </ul>
-          </li>
- -->
-
-<!-- 
-          <li class="dropdown"> <a  id="fac" class="dropdown-toggle" data-toggle="dropdown" href="#">Facilities<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="facilities-curriculum.aspx">Curriculum</a></li>
-              <li><a href="facilities-library.aspx">Library</a></li>
-              <li><a href="facilities-digital-classroom.aspx">Digital Classroom</a></li>
-              <li><a href="facilities-labsm.aspx">Labs</a></li>
-            </ul>
-          </li>
- -->
-
-<!-- 
-          <li class="dropdown"> <a id="act" class="dropdown-toggle" data-toggle="dropdown" href="#">Activities<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="activities-cultural.aspx">Cultural</a></li>
-              <li><a href="activities-housesystem.aspx">House System</a></li>
-              <li><a href="activities-sports.aspx">Sports & Games</a></li>
-              <li><a href="activities-science.aspx">Science Club</a></li>
-              <li><a href="activities-academy.aspx">Academy</a></li>
-              <li><a href="activities-seminars.aspx">Seminars</a></li>
-              <li><a href="activities-educational.aspx">Educational Tour</a></li>
-            </ul>
-          </li>
- -->
-
-
-          <!-- <li><a id="faculty" href="faculty.aspx">Faculty</a></li> -->
-
-<%
-    String m,href;
-        if (session.getAttribute("userDetails") == null)
-        {
-             m = "Login";
-             href = "indexLogin.jsp";
-        }
-        else
-        {
-            HashMap<String,String> hm = (HashMap)session.getAttribute("userDetails");
-             m = hm.get("username");
-             href = "profile.jsp";
-        }
-        %>    
-          <li><a id="gal" href=<%=href%>><%=m%></a></li>
+  
+          <!-- <li><a id="gal" href=<%=href%>><%=m%></a></li> -->
         
           <li><a id="almni" href="#" >About Us</a></li>
         </ul>
@@ -317,7 +212,7 @@
   <div class="row abtbgclr">
     <div class="container">
       <div class="clr5"></div>
-      <h1 class="orange">Administrators</h1>
+      <h1 class="wow flash orange">Administrators</h1>
       <div class="clr"></div>
       <div>
           <p>
@@ -331,31 +226,7 @@
 
           </p>
       </div>
-     <!--  <div class="school-part"><img src="images/admin/1.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rt. Rev. Bp. <br/> Dominic Kokkat CST</p>
-        <p class="admin"> (Bp.Emeritus Of Gorakhpur) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/2.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Bp. Thomas <br/> Thuruthimattam CST </p>
-        <p class="admin"> (Bishop Of GKP) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/3.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr. Benny K.K. </p>
-        <p class="admin"> (Secretary Catholic Diocese of GKP Education society) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/4.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr. <br/> Sibi Joseph </p>
-        <p class="admin"> (Manager) </p>
-      </div>
-      <div class="school-part"><img src="images/admin/5.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr. <br/> Jose Kokkandathil</p>
-        <p class="admin"> (Principal) </p>
-      </div>
-
-      <div class="school-part"><img src="images/admin/6.jpg" class="img-responsive img-thumbnail center-block grow" alt="St. Joseph, Goraknath"/>
-        <p class="schltxt">Rev. Fr.  <br/>Mathews Mankuthel</p>
-        <p class="admin"> Vice Principal </p>
-      </div> -->
+    
       <div class="clr5"></div>
     </div>
   </div>

@@ -5,13 +5,27 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Login Page</title>
-		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
-		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="css/set1.css" />
+		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="TextInputEffects/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/set1.css" />
 	</head>
 	<body>
-		<form  onsubmit="check();">
+            <%
+            String msg=(String)session.getAttribute("msg");
+            if(msg!=null)  
+            {
+        %>
+        <div class="panel panel-danger">
+            <div class="panel-heading text-center">
+                <p><%=msg%></p>
+            </div>
+        </div>
+        <%
+            session.setAttribute("msg", null);
+            }
+        %>
+        <form  action="DonorInfo" onsubmit="check();" method="post">
 		<div class="container">
 
 			<section class="content bgcolor-1">
@@ -421,3 +435,4 @@
 		</script> -->
 	</body>
 </html>
+

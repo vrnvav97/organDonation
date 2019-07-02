@@ -33,7 +33,7 @@ public class DbConnect {
         insertUser1=c.prepareStatement(
     "insert into logindetails values(?,?,?,?)");
         insertUser2=c.prepareStatement(
-    "insert into donor_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    "insert into donor_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     }
     
     public HashMap checkLogin(String u,String p) throws SQLException{
@@ -79,7 +79,7 @@ public class DbConnect {
         insertUser2.setInt(4, (int)userDetails.get("page"));
         insertUser2.setString(5, (String)userDetails.get("pgender"));
         insertUser2.setString(6, (String)userDetails.get("pbloodgroup"));
-        insertUser2.setString(7, (String)userDetails.get("organdonate"));
+        insertUser2.setString(7, (String)userDetails.get("organSelected"));
         insertUser2.setString(8, (String)userDetails.get("paddress"));
         insertUser2.setString(9, (String)userDetails.get("pcity"));
         insertUser2.setString(10, (String)userDetails.get("pdistrict"));
@@ -90,11 +90,11 @@ public class DbConnect {
         insertUser2.setString(15, (String)userDetails.get("pmobile"));
         insertUser2.setString(16, (String)userDetails.get("ename"));
         insertUser2.setString(17, (String)userDetails.get("relation"));
-        insertUser2.setString(18, (String)userDetails.get("eaddress"));
+
         
-        insertUser2.setString(19, (String)userDetails.get("estate"));
-        insertUser2.setString(20, (String)userDetails.get("eemail"));
-        insertUser2.setString(21, (String)userDetails.get("emobile"));
+        insertUser2.setString(18, (String)userDetails.get("estate"));
+        insertUser2.setString(19, (String)userDetails.get("eemail"));
+        insertUser2.setString(20, (String)userDetails.get("emobile"));
         int x=insertUser2.executeUpdate();
         if(x!=0)
            return "Success";
