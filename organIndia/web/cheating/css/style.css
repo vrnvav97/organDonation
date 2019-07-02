@@ -44,7 +44,7 @@ h6 {font-size: 30px; margin-top: 20px; margin-bottom: 25px; text-transform: inhe
 .navbar-inverse {background-color: rgba(255, 255, 255, 0.31);border: 0px;padding: 5px 0px;}
 .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #70b50c; background-color: transparent;font-weight: bold; }
 .navbtn {background: transparent;}
-.navbar-inverse .navbar-nav>li>a {color: #444;font-size: 16px; border: none;}
+.navbar-inverse .navbar-nav>li>a {color: #444;font-size: 22px; border: none;}
 .navbar-nav>li>a {padding-top: 12px; padding-bottom: 12px;}  
 .nav>li>a{padding: 8px;}
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {color: #70b50c; 
@@ -66,12 +66,12 @@ background-color: transparent;}
 .admin{color: #313131;font-size: 14px; font-weight: normal;text-align: center;margin-top: -10px; overflow: hidden; display: -webkit-box;
 -webkit-line-clamp: 3;-webkit-box-orient: vertical; height: 3em;line-height: 22px;text-overflow: ellipsis;}
 .abtbg{background: url(../images/bg.png) repeat;}
-.abtbgclr{background-color: rgba(239, 208, 179, 0.23);border-top: 2px solid #a0d340; border-bottom: 2px solid #2d7ab1;}
-.asbuttext{font-size: 15px;color: #1b1b1b; text-align: justify;line-height: 26px;margin-bottom: 24px;}
+.abtbgclr{background-color: rgba(239, 208, 179, 0.23); border-bottom: 2px solid #2d7ab1;}
+.asbuttext{font-size: 18px;color: #1b1b1b; text-align: justify;line-height: 26px;margin-bottom: 24px;}
 .abtbtn{background: #fff; border: 1px solid #4a3358; padding: 0px 15px; color: #4a3358; font-size: 17px;  margin-left: 3px;}
 .abtbtn:hover{background: #efe2d7;}
 /*********************Event/News Section Classes**********************/
-.highlights{background-image: url(../images/events.jpg); height: auto;background-position: right top, left top; background-repeat:repeat; object-position:center; object-fit: contain; width: 100%; padding-top: 18px; padding-bottom: 18px;}
+.highlights{/*background-image: url(../images/events.jpg)*/ background-color: #211f1f; height: auto;background-position: right top, left top; background-repeat:repeat; object-position:center; object-fit: contain; width: 100%; padding-top: 18px; padding-bottom: 18px;}
 .iconbg{background-image: url(../images/events.jpg); height: auto;background-position: right top, left top; background-repeat:repeat; object-position:center; object-fit: contain; width: 100%; padding-top: 30px;padding-bottom: 30px;}
 .evnttab {background: #2d7ab1; padding: 4px; font-size: 25px;text-align: center;color: white;margin: 0px;}
 .evntsec {border: 1px solid #fbf7f3; background: #fff;}

@@ -1,3 +1,12 @@
+<%-- 
+    Document   : index
+    Created on : 3 Jul, 2019, 1:52:31 AM
+    Author     : Anshuman bhatt
+--%>
+
+<%@page import="java.util.HashMap"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 
 
 <!DOCTYPE html>
@@ -118,13 +127,24 @@
 
           
 
-          <li class="dropdown"> <a id="about" class="dropdown-toggle" data-toggle="dropdown" href="#">Donate<span class="caret"></span></a>
+<!--          <li class="dropdown"> <a id="about" class="dropdown-toggle" data-toggle="dropdown" href="#">Donate<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="#">Eye</a></li>
               <li><a href="#">Heart</a></li>
               <li><a  href="#">Liver</a></li>
         <li><a href="#">Kidney</a></li>
         <li><a href="#">Lungs</a></li>
+            </ul>
+          </li>-->
+
+   <li class="dropdown"> <a id="about" class="dropdown-toggle" data-toggle="dropdown" href="#">Donate<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Eye.jsp">Eye</a></li>
+              <li><a href="Heart.jsp">Heart</a></li>
+              <li><a  href="Liver.jsp">Liver</a></li>
+        <li><a href="Kidney.jsp">Kidney</a></li>
+        <li><a href="Lungs.jsp">Lungs</a></li>
+        <li><a href="Blood.jsp">Blood</a></li>
             </ul>
           </li>
 
@@ -181,15 +201,16 @@
              href = "profile.jsp";
         }
         %>    
-         
-          <li><a id="gal" href="../login/dist/index.html">Login</a></li>
-          <!-- <li><a id="almni" href="#" >About Us</a></li> -->
+          <li><a id="gal" href=<%=href%>><%=m%></a></li>
+        
+<!--          <li><a id="almni" href="#" >About Us</a></li>-->
         </ul>
       </div>
     </div>
   </nav>
 </div>
 </div>
+
 
 
 
@@ -353,7 +374,7 @@
 
 
 <div class="graph">
-  <script type="cheating/text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js"></script> 
+  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/1845_RC03/embed_loader.js"></script> 
 <script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"organ donation","geo":"IN","time":"today 5-y"}],"category":0,"property":""}, {"exploreQuery":"date=today%205-y&geo=IN&q=organ%20donation","guestPath":"https://trends.google.com:443/trends/embed/"}); </script> 
 </div>
 <!-------------- icons Section --------------->
@@ -478,10 +499,10 @@
     <p class="text-muted footertxt">© Copyright 2017 by Donate India &nbsp; | &nbsp; Created By <a class="boticon" href="http://www.entab.in/" target="_blank"> Varun and Anshuman </a></p>
   </div>
 </div> -->
-<script type="text/javascript" src="js/jquery-3.2.1.js"></script> 
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script> 
+<script type="cheating/text/javascript" src="js/jquery-3.2.1.js"></script> 
+    <script type="cheating/text/javascript" src="js/jquery-1.9.1.min.js"></script> 
 
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<script type="cheating/text/javascript" src="js/bootstrap.min.js"></script> 
 <script type="text/javascript">
     $('ul.nav li.dropdown').hover(function () {
         $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);

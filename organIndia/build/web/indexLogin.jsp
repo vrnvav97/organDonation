@@ -1,11 +1,3 @@
-<%-- 
-    Document   : index
-    Created on : Jun 26, 2019, 1:29:20 AM
-    Author     : Nsignia
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -34,41 +26,37 @@
     <div ng-app ng-init="checked = false">
 
 
-<!--        <%
-            //tring msg = "hello world";
-//            String m =String.valueOf( session.getAttribute (msg));
-//            if (m != null)
-//            {
-//                %>
-                -->
-      <div class="message"><label for="username" ><</label></div>
-      
+      <div class="message"><label for="username" >Successfully Signed Up!</label></div>
 
 
-            <form class="form-signin" action="LoginServlet" method="post" name="form">
+				        <form class="form-signin" onsubmit=validateSignIn(); action="" method="post" name="form">
           <label for="username">Username</label>
-          <input class="form-styling" type="text" name="username"  />
-          <label for="password">Password</label>
-          <input class="form-styling password" type="password" name="password" id="password"/>
+		  <input  class="form-styling" type="text" name="username" id="username"  />
+		  <div id="fakebox-text">Search Google or type a URL</div>
+		  
+		  <label for="password">Password</label>
+          <input class="form-styling" type="password" name="password" id="password"/>
+		  <span id="pass" class="text-danger font-weight-bold"></span>
           <!-- <input type="checkbox" id="checkbox"/>
           <label for="checkbox" ><span class="ui"></span>Keep me signed in</label> -->
           <div class="btn-animate">
             <!-- <a class="btn-signin">Sign in</a> -->
+	
+          
             <input type="submit" value="Sign in" class="btn-signin" style="padding:5px;text-transform: uppercase;font-size: 13px;font-weight: 700">
           </div>
          <!--  <a id="refresh" value="Refresh" onClick="history.go()"><img src="left-arrow.png" style="max-width: 35px" ></a> -->
 				        </form>
-
-
-				        <form class="form-signup" action="SignUp" method="post" name="form">
-          <label for="name">Full name</label>
-          <input class="form-styling" type="text" name="fullname" placeholder=""/>
+						
+						<form class="form-signup" onsubmit=validateSignUp(); action="" method="post" name="form">
+          <label for="fullname">Full name</label>
+          <input class="form-styling" type="text" name="fullname" id="fullname" placeholder=""/>
           <label for="email">Email</label>
-          <input class="form-styling" type="text" name="email" placeholder=""/>
+          <input class="form-styling" type="text" name="email" id="email" placeholder=""/>
           <label for="password">Password</label>
-          <input class="form-styling" type="text" name="password" placeholder=""/>
+          <input class="form-styling" type="password" name="password1" id="password1"placeholder=""/>
           <label for="confirmpassword">Confirm password</label>
-          <input class="form-styling" type="text" name="confirmpassword" placeholder=""/>
+          <input class="form-styling" type="password" name="confirmpassword" id="confirmpassword" placeholder=""/>
           <input type="submit" value="Sign Up" class="btn-signin" style="padding:5px;text-transform: uppercase;font-size: 13px;font-weight: 700;margin-top: 30px">
 				        </form>
       
@@ -79,7 +67,7 @@
         <a href="#">Forgot your password ?</a>
         <br>
 
-         <a id="refresh" value="Refresh" href="index.jsp" >
+         <a id="refresh" value="Refresh" href="../../cheating/indexxx.html" >
           <img src="login/dist/left-arrow.png" style="max-width: 35px;margin-top: 20px"  >
         </a>
       </div>
@@ -88,8 +76,15 @@
       
       
   </div>
-    
-  <!-- <a id="refresh" value="Refresh" onClick="history.go()">
+  
+  
+						
+						
+						
+		
+ 
+	
+          <!-- <a id="refresh" value="Refresh" onClick="history.go()">
     <svg class="refreshicon"   version="1.1" id="Capa_1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
          width="25px" height="25px" viewBox="0 0 322.447 322.447" style="enable-background:new 0 0 322.447 322.447;"
          xml:space="preserve">
@@ -108,6 +103,10 @@
   
 
     <script  src="login/dist/script.js"></script>
+	<script  src="login/dist/validation.js"></script>
+	
+
+	
 
 
 
