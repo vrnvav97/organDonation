@@ -93,6 +93,12 @@
 						<span class="input__label-content input__label-content--hoshi"></span>
 					</label>
 				</span>
+				<span class="input input--hoshi">
+					<input class="input__field input__field--hoshi" type="text" id="input-8" style="color: 	#4700ff" name="pcountry" placeholder="Country" />
+					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
+						<span class="input__label-content input__label-content--hoshi"></span>
+					</label>
+				</span>
 			</section>
 			<section class="content bgcolor-7">
 				<h2>Extras</h2>
