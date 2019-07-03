@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/set1.css" />
+		<script src="countries.js"></script>
 	</head>
 	<body>
             <%
@@ -94,10 +95,11 @@
 					</label>
 				</span>
 				<span class="input input--hoshi">
-					<input class="input__field input__field--hoshi" type="text" id="input-8" style="color: 	#4700ff" name="pcountry" placeholder="Country" />
+					<!-- <input class="input__field input__field--hoshi" type="text" id="input-8" style="color: 	#4700ff" name="pcountry" placeholder="Country" />
 					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
 						<span class="input__label-content input__label-content--hoshi"></span>
-					</label>
+					</label> -->
+					<select id="country2" name ="country2"></select>
 				</span>
 			</section>
 			<section class="content bgcolor-7">
@@ -439,6 +441,9 @@
 				}
 			})();
 		</script> -->
+		<script type="text/javascript">
+			populateCountries("country2");
+		</script>
 	</body>
 </html>
 
