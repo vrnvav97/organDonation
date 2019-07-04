@@ -121,7 +121,7 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a id="home" href="indexxx.html">Home</a></li>
+          <li><a id="home" href="index.jsp">Home</a></li>
           <li><a id="home" href="#">Become a donor</a></li>
 
 

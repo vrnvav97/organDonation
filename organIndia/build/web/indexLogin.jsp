@@ -29,7 +29,7 @@
       <div class="message"><label for="username" >Successfully Signed Up!</label></div>
 
 
-				        <form class="form-signin" onsubmit=validateSignIn(); action="" method="post" name="form">
+				        <form class="form-signin" onsubmit=validateSignIn(); action="LoginServlet" method="post" name="form">
           <label for="username">Username</label>
 		  <input  class="form-styling" type="text" name="username" id="username"  />
 		  <div id="fakebox-text">Search Google or type a URL</div>

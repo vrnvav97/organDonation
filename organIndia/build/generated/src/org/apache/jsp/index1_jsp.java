@@ -47,7 +47,7 @@ public final class index1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t<meta charset=\"UTF-8\" />\n");
       out.write("\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n");
       out.write("\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n");
-      out.write("\t\t<title>Login Page</title>\n");
+      out.write("\t\t<title>Donor Information</title>\n");
       out.write("\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"TextInputEffects/css/normalize.css\"/>\n");
       out.write("\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"TextInputEffects/fonts/font-awesome-4.2.0/css/font-awesome.min.css\" />\n");
       out.write("\t\t<link rel=\"stylesheet\" type=\"text/css\" href=\"TextInputEffects/css/demo.css\" />\n");
@@ -138,6 +138,12 @@ public final class index1_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t</span>\n");
       out.write("\t\t\t\t<span class=\"input input--hoshi\">\n");
       out.write("\t\t\t\t\t<input class=\"input__field input__field--hoshi\" type=\"text\" id=\"input-8\" style=\"color: \t#4700ff\" name=\"pstate\" placeholder=\"State\" />\n");
+      out.write("\t\t\t\t\t<label class=\"input__label input__label--hoshi input__label--hoshi-color-3\" for=\"input-6\">\n");
+      out.write("\t\t\t\t\t\t<span class=\"input__label-content input__label-content--hoshi\"></span>\n");
+      out.write("\t\t\t\t\t</label>\n");
+      out.write("\t\t\t\t</span>\n");
+      out.write("\t\t\t\t<span class=\"input input--hoshi\">\n");
+      out.write("\t\t\t\t\t<input class=\"input__field input__field--hoshi\" type=\"text\" id=\"input-8\" style=\"color: \t#4700ff\" name=\"pcountry\" placeholder=\"Country\" />\n");
       out.write("\t\t\t\t\t<label class=\"input__label input__label--hoshi input__label--hoshi-color-3\" for=\"input-6\">\n");
       out.write("\t\t\t\t\t\t<span class=\"input__label-content input__label-content--hoshi\"></span>\n");
       out.write("\t\t\t\t\t</label>\n");
