@@ -36,7 +36,7 @@ public class DonorInfo extends HttpServlet {
             String pm=request.getParameter("pmobile");
             String en=request.getParameter("ename");
             String r=request.getParameter("relation");
-  
+            String ec=request.getParameter("ecity");
             String es=request.getParameter("estate");
             String ee=request.getParameter("eemail");
             String em=request.getParameter("emobile");
@@ -79,7 +79,7 @@ public class DonorInfo extends HttpServlet {
             }
         } catch (Exception ex) {
             session.setAttribute("msg", "Registration Failed: "+ex);
-            response.sendRedirect("home.jsp");
+            response.sendRedirect("home4554.jsp");
         }
         }
     }
