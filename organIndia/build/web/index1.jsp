@@ -4,27 +4,15 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Donor Information</title>
+		<title>Login Page</title>
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/normalize.css"/>
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/fonts/font-awesome-4.2.0/css/font-awesome.min.css" />
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="TextInputEffects/css/set1.css" />
+		<script src="TextInputEffects/countries.js"></script>
 	</head>
 	<body>
-            <%
-            String msg=(String)session.getAttribute("msg");
-            if(msg!=null)  
-            {
-        %>
-        <div class="panel panel-danger">
-            <div class="panel-heading text-center">
-                <p><%=msg%></p>
-            </div>
-        </div>
-        <%
-            session.setAttribute("msg", null);
-            }
-        %>
+            
         <form  action="DonorInfo" onsubmit="check();" method="post">
 		<div class="container">
 
@@ -53,12 +41,12 @@
 				<span class="">
 					<h2 class="nomargin-bottom" style="color: black">Which organ you want to donate</h2>
 					<br>
-					<input type="checkbox" name="oraganSelected" value="Eye" style="margin: 10px">Eye
-					<input type="checkbox" name="oraganSelected" value="Heart" style="margin: 10px">Heart
-					<input type="checkbox" name="oraganSelected" value="liver" style="margin: 10px">Liver
-					<input type="checkbox" name="oraganSelected" value="kidney" style="margin: 10px">Kidney
-					<input type="checkbox" name="oraganSelected" value="lungs" style="margin: 10px">Lungs
-					<input type="checkbox" name="oraganSelected" value="full" style="margin: 10px">Full Body
+					<input type="checkbox" name="organSelected" value="Eye" style="margin: 10px">Eye
+					<input type="checkbox" name="organSelected" value="Heart" style="margin: 10px">Heart
+					<input type="checkbox" name="organSelected" value="liver" style="margin: 10px">Liver
+					<input type="checkbox" name="organSelected" value="kidney" style="margin: 10px">Kidney
+					<input type="checkbox" name="organSelected" value="lungs" style="margin: 10px">Lungs
+					<input type="checkbox" name="organSelected" value="full" style="margin: 10px">Full Body
 				</span>
 			</section>
 			<section class="content" style="background-color: #f3cdf3;color: #fff">
@@ -94,10 +82,12 @@
 					</label>
 				</span>
 				<span class="input input--hoshi">
-					<input class="input__field input__field--hoshi" type="text" id="input-8" style="color: 	#4700ff" name="pcountry" placeholder="Country" />
+					<!-- <input class="input__field input__field--hoshi" type="text" id="input-8" style="color: 	#4700ff" name="pcountry" placeholder="Country" />
 					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-6">
 						<span class="input__label-content input__label-content--hoshi"></span>
-					</label>
+					</label> -->
+					 <select id="country2" name ="pcountry"></select>
+
 				</span>
 			</section>
 			<section class="content bgcolor-7">
@@ -439,6 +429,10 @@
 				}
 			})();
 		</script> -->
+		<script type="text/javascript">
+			populateCountries("country2");
+		</script>
+
 	</body>
 </html>
 

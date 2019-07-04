@@ -33,7 +33,7 @@ public class DbConnect {
         insertUser1=c.prepareStatement(
     "insert into logindetails values(?,?,?,?)");
         insertUser2=c.prepareStatement(
-    "insert into donor_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+    "insert into donor_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     }
     
     public HashMap checkLogin(String u,String p) throws SQLException{
@@ -83,18 +83,23 @@ public class DbConnect {
         insertUser2.setString(8, (String)userDetails.get("paddress"));
         insertUser2.setString(9, (String)userDetails.get("pcity"));
         insertUser2.setString(10, (String)userDetails.get("pdistrict"));
-        insertUser2.setString(11, (String)userDetails.get("pbloodgroup"));
-        insertUser2.setString(12, (String)userDetails.get("ppincode"));
-        insertUser2.setString(13, (String)userDetails.get("pstate"));
-        insertUser2.setString(14, (String)userDetails.get("pemail"));
-        insertUser2.setString(15, (String)userDetails.get("pmobile"));
-        insertUser2.setString(16, (String)userDetails.get("ename"));
-        insertUser2.setString(17, (String)userDetails.get("relation"));
-
+        insertUser2.setString(11, (String)userDetails.get("ppincode"));
+        insertUser2.setString(12, (String)userDetails.get("pstate"));
+        insertUser2.setString(13, (String)userDetails.get("pemail"));
+        insertUser2.setString(14, (String)userDetails.get("pmobile"));
+        insertUser2.setString(15, (String)userDetails.get("ename"));
+        insertUser2.setString(16, (String)userDetails.get("relation"));
+        insertUser2.setString(17, (String)userDetails.get("ecity"));
         
         insertUser2.setString(18, (String)userDetails.get("estate"));
         insertUser2.setString(19, (String)userDetails.get("eemail"));
         insertUser2.setString(20, (String)userDetails.get("emobile"));
+        insertUser2.setString(21, "dsf");
+        insertUser2.setString(22, "geger");
+        
+        insertUser2.setString(23, "eerer");
+        insertUser2.setString(24, "wrre");
+        insertUser2.setString(25, "ewwe");
         int x=insertUser2.executeUpdate();
         if(x!=0)
            return "Success";

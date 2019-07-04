@@ -26,7 +26,7 @@ public class DonorInfo extends HttpServlet {
             int pa=Integer.parseInt(request.getParameter("page"));
             String pg=request.getParameter("pgender");
             String pbg=request.getParameter("pbloodgroup");
-            String od[]=request.getParameterValues("organSelected");
+            String os[]=request.getParameterValues("organSelected");
             String pad=request.getParameter("paddress");
             String pc=request.getParameter("pcity");
             String pd=request.getParameter("pdistrict");
@@ -50,7 +50,12 @@ public class DonorInfo extends HttpServlet {
             userDetails.put("page", pa);
             userDetails.put("pgender", pg);
             userDetails.put("pbloodgroup", pbg);
-            userDetails.put("organSelected", od);
+            String ose="";
+            for(int i=0;i<os.length;i++)
+            {
+                ose=ose+","+os[i];
+            }
+            userDetails.put("organSelected", ose);
             userDetails.put("paddress", pad);
             userDetails.put("pcity", pc);
             userDetails.put("pdistrict", pd);
@@ -65,11 +70,13 @@ public class DonorInfo extends HttpServlet {
             userDetails.put("eemail", em);
             userDetails.put("emobile", em);
             db.DbConnect db=new db.DbConnect();
+             System.out.println("ajjjdjdd");
             String m=db.insertUser2(userDetails);
+           
             if(m.equalsIgnoreCase("Success")){
                 
                 session.setAttribute("userDetails", userDetails);
-                response.sendRedirect("profile.jsp");
+                response.sendRedirect("Profile.jsp");
             }else if(m.equalsIgnoreCase("Already")){
                 session.setAttribute("msg", "Email ID Already Exist!");
                 response.sendRedirect("index1.jsp");
@@ -79,6 +86,7 @@ public class DonorInfo extends HttpServlet {
             }
         } catch (Exception ex) {
             session.setAttribute("msg", "Registration Failed: "+ex);
+            System.out.println (ex);
             response.sendRedirect("home4554.jsp");
         }
         }

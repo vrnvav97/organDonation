@@ -3,7 +3,6 @@
     HashMap userDetails=(HashMap)session.getAttribute("userDetails");
     if(userDetails!=null){
 %>
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,11 +10,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Donate India</title>
     <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/custom.css" rel="stylesheet">
+    <link href="Profile/css/bootstrap.min.css" rel="stylesheet">
+	<link href="Profile/css/custom.css" rel="stylesheet">
 	
-	<script language="Javascript" src="js/jquery.js"></script>
-	<script type="text/JavaScript" src='js/state.js'></script>
+	<script language="Javascript" src="Profile/js/jquery.js"></script>
+	<script type="text/JavaScript" src='Profile/js/state.js'></script>
   </head>
   <body data-spy="scroll" data-target="#my-navbar">
 	<nav class="navbar navbar-inverse navbar-fixed-top">
@@ -26,12 +25,12 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="profile.jsp">Donate India</a>
+			<a class="navbar-brand" href="Profile.jsp">Donate India</a>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-                                    <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pname") %> </p></div></li>
+                                    <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pname") %></p></div></li>
 					<li><a href="profile.jsp">Home</a></li>
-					<li><a href="Logout">Logout</a><li>
+					<li><a href="Logout.jsp">Logout</a><li>
 				</ul>			
 			</div>
 		</div>
@@ -42,44 +41,38 @@
 			<section>
 			<div class="row">
 				<div class="col-lg-6">
-<!--					<div class="col-lg-4">
-                                            <img src="GetPhoto?email=<%--=userDetails.get("email")--%>" width="120" height="150">
-					</div>-->
-					<div class="col-lg-6">
-						<div class="form-group">
-							<label for="email" class="control-label">Name: <font color="grey"><%= userDetails.get("pfirstname") %><%= userDetails.get("plastname") %></font></label>
-						</div><!--end form group-->
-                                                <div class="form-group">
-							<label for="email" class="control-label">Age: <font color="grey"><%= userDetails.get("page") %></font></label>
-						</div><!--end form group-->
-                                                <div class="form-group">
-							<label for="email" class="control-label">Age: <font color="grey"><%= userDetails.get("page") %></font></label>
-						</div><!--end form group-->
-                                                <div class="form-group">
-							<label for="email" class="control-label">Gender: <font color="grey"><%= userDetails.get("pgender") %></font></label>
-						</div><!--end form group-->
-                                                <div class="form-group">
-							<label for="email" class="control-label">Bloodgroup: <font color="grey"><%= userDetails.get("pbloodgroup") %></font></label>
-						</div><!--end form group-->
-						<div class="form-group">
-							<label for="name" class="control-label">Organ Selected for Donation:<font color="grey"> <%= userDetails.get("organSelected") %></font></label>
-						</div><!--end form group-->
+					<div class="col-lg-4">
+                                    
 						
-						</div><!--end form group-->
-						<div class="col-lg-10 form-group">
-							<label for="state" class="control-label">Address: <font color="grey"><%= userDetails.get("paddress") %>,<%= userDetails.get("pcity") %>,<%= userDetails.get("pdistrict") %>,<%= userDetails.get("ppincode") %>,<%= userDetails.get("pstate") %>,<%= userDetails.get("country") %></font></label>
-						</div><!--end form group-->
-						<div class="form-group">
-							<div class="col-lg-10 form-group">
-								<a href="editprofile.html" class="btn btn-primary">Edit Profile</a>
-                                <a href="changepassword.html" class="btn btn-primary">Change Password</a>
-															
-							</div>		
-						</div>
 					</div>
-                                                
+					<div class="col-lg-6">
+							<form action="" class="form-horizontal">
+								<div class="form-group">
+									<label for="email" class="control-label">Name:<%= userDetails.get("pfirstname") %><%= userDetails.get("plastname") %> <font color="grey"></font></label>
+								</div><!--end form group-->
+								<div class="form-group">
+									<label for="name" class="control-label">Age:<%= userDetails.get("page") %><font color="grey"></font></label>
+								</div><!--end form group-->
+								<div class="form-group">
+									<label for="gender" class="control-label">Gender:<%= userDetails.get("pgender") %> <font color="grey"></font></label>
+								</div><!--end form group-->
+								<div class="form-group">
+									<label for="dob" class="control-label">Bloodgroup:<%= userDetails.get("pbloodgroup") %> <font color="grey"></font></label>
+								</div>
+								</div><!--end form group-->
+								<div class="col-lg-10 form-group">
+									<label for="state" class="control-label">Address: <font color="grey"></font></label>
+								</div><!--end form group-->
+								<div class="form-group">
+									<div class="col-lg-10 form-group">
+										<button type="submit" class="btn btn-primary" formaction="editprofile.jsp">Edit Profile</button>
+										<button type="submit" class="btn btn-primary" formaction="changepassword.jsp">Change Password</button>
+									</div>		
+								</div>
+							</form>
+					</div>
 				<div class="col-lg-6">
-      <%
+                                    <%
             String msg=(String)session.getAttribute("msg");
             if(msg!=null)  
             {
@@ -93,24 +86,24 @@
             session.setAttribute("msg", null);
             }
         %>
-<!--					<div class="panel panel-default">
+					<div class="panel panel-default">
 						<div class="panel-heading text-center">
 							<h3>Search People</h3>
 						</div>
 						<div class="panel-body">
-                                                    <form action="SearchProcess" method="post" class="form-horizontal">
+							<form action="PeopleSearchPro.jsp" method='post' class="form-horizontal">
 								<div class="form-group">
 									<label for="state" class="col-lg-3 control-label">State:</label>
 									<div class="col-lg-9">
-										<select name="state" class="form-control" id="listBox" onchange='selct_district(this.value)'>
+                                                                            <select name="state" class="form-control" id="listBox" onchange='selct_district(this.value)'>
 											
 										</select>
 									</div>
-								</div>end form group
+								</div><!--end form group-->
 								<div class="form-group">
 									<label for="city" class="col-lg-3 control-label">City:</label>
 										<div class="col-lg-9">
-											<select name="city" class="form-control" id='secondlist'>
+                                                                                    <select name="city" class="form-control" id='secondlist'>
 										</select>
 									</div>
 								</div>
@@ -118,7 +111,7 @@
 									<label for="area" class="col-lg-3 control-label">Area:</label>
 									<div class="col-lg-9">
 										
-										<input type="text" name="area" class="form-control" id="area" placeholder="Enter your Area" />
+										<input type="text" name="area" class="form-control" id="area" placeholder="Enter your Area" required/>
 									</div>
 								</div>
 								<div class="form-group">
@@ -128,7 +121,7 @@
 								</div>
 							</form>
 						</div>
-					</div>-->
+					</div>
 				</div>
 			</div>
 		</section>
@@ -143,12 +136,12 @@
 		</div>
 	</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="Profile/js/bootstrap.min.js"></script>
   </body>
 </html>
 <%       
     }else{
         session.setAttribute("msg", "Plz login First!");
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("home.jsp");
     }
 %>
