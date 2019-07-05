@@ -109,13 +109,15 @@
           </div>
         </div>
       </div>
+
+      <!-- 
       <div class="grid user-grid">
         <div class="grid-header">
           <div class="icon">
 <i class="fa fa-user-circle-o" aria-hidden="true"></i>
 
 
-          </div>
+          </div> -->
           <!-- <div class="label">
             Abhijeet Sutar
           </div>
