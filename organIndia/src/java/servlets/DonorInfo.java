@@ -53,7 +53,7 @@ public class DonorInfo extends HttpServlet {
             String ose="";
             for(int i=0;i<os.length;i++)
             {
-                ose=ose+","+os[i];
+                ose=ose+os[i]+",";
             }
             userDetails.put("organSelected", ose);
             userDetails.put("paddress", pad);
@@ -65,7 +65,7 @@ public class DonorInfo extends HttpServlet {
              userDetails.put("pmobile", pm);
             userDetails.put("ename", en);
             userDetails.put("relation", r);
-         
+            userDetails.put("ecity", r);
             userDetails.put("estate", es);
             userDetails.put("eemail", em);
             userDetails.put("emobile", em);
@@ -87,7 +87,7 @@ public class DonorInfo extends HttpServlet {
         } catch (Exception ex) {
             session.setAttribute("msg", "Registration Failed: "+ex);
             System.out.println (ex);
-            response.sendRedirect("home4554.jsp");
+            response.sendRedirect("index1.jsp");
         }
         }
     }

@@ -28,7 +28,7 @@
 			<a class="navbar-brand" href="Profile.jsp">Donate India</a>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-                                    <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pname") %></p></div></li>
+                                    <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pfirstname") %></p></div></li>
 					<li><a href="profile.jsp">Home</a></li>
 					<li><a href="Logout.jsp">Logout</a><li>
 				</ul>			
@@ -48,24 +48,34 @@
 					<div class="col-lg-6">
 							<form action="" class="form-horizontal">
 								<div class="form-group">
-									<label for="email" class="control-label">Name:<%= userDetails.get("pfirstname") %><%= userDetails.get("plastname") %> <font color="grey"></font></label>
+									<label for="email" class="control-label">Name:<font color="grey"><%= userDetails.get("pfirstname")+" " %><%= userDetails.get("plastname") %> </font></label>
 								</div><!--end form group-->
 								<div class="form-group">
-									<label for="name" class="control-label">Age:<%= userDetails.get("page") %><font color="grey"></font></label>
+									<label for="name" class="control-label">Age:<font color="grey"><%= userDetails.get("page") %></font></label>
 								</div><!--end form group-->
 								<div class="form-group">
-									<label for="gender" class="control-label">Gender:<%= userDetails.get("pgender") %> <font color="grey"></font></label>
+									<label for="gender" class="control-label">Gender: <font color="grey"><%= userDetails.get("pgender") %></font></label>
 								</div><!--end form group-->
 								<div class="form-group">
-									<label for="dob" class="control-label">Bloodgroup:<%= userDetails.get("pbloodgroup") %> <font color="grey"></font></label>
+									<label for="dob" class="control-label">Bloodgroup: <font color="grey"><%= userDetails.get("pbloodgroup") %></font></label>
 								</div>
+                                                                <div class="form-group">
+									<label for="dob" class="control-label">Organ Selected for donation: <font color="grey"><%= userDetails.get("organSelected") %></font></label>
+								</div>
+                                                                <div class="form-group">
+									<label for="dob" class="control-label">Email: <font color="grey"><%= userDetails.get("pemail") %></font></label>
+								</div>
+                                                                <div class="form-group">
+									<label for="dob" class="control-label">Mobile: <font color="grey"><%= userDetails.get("pmobile") %></font></label>
+								</div>
+                                                                
 								</div><!--end form group-->
 								<div class="col-lg-10 form-group">
-									<label for="state" class="control-label">Address: <font color="grey"></font></label>
+									<label for="state" class="control-label">Address: <font color="grey"><%= userDetails.get("paddress") %>, <%= userDetails.get("pcity") %>, <%= userDetails.get("pdistrict") %>, <%= userDetails.get("pstate") %>, <%= userDetails.get("pcountry") %></font></label>
 								</div><!--end form group-->
 								<div class="form-group">
 									<div class="col-lg-10 form-group">
-										<button type="submit" class="btn btn-primary" formaction="editprofile.jsp">Edit Profile</button>
+										<!--<button type="submit" class="btn btn-primary" formaction="editprofile.jsp">Edit Profile</button>-->
 										<button type="submit" class="btn btn-primary" formaction="changepassword.jsp">Change Password</button>
 									</div>		
 								</div>
@@ -86,7 +96,7 @@
             session.setAttribute("msg", null);
             }
         %>
-					<div class="panel panel-default">
+<!--					<div class="panel panel-default">
 						<div class="panel-heading text-center">
 							<h3>Search People</h3>
 						</div>
@@ -99,7 +109,7 @@
 											
 										</select>
 									</div>
-								</div><!--end form group-->
+								</div>end form group
 								<div class="form-group">
 									<label for="city" class="col-lg-3 control-label">City:</label>
 										<div class="col-lg-9">
@@ -121,7 +131,7 @@
 								</div>
 							</form>
 						</div>
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</section>
