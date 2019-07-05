@@ -100,7 +100,7 @@ public final class indexForm_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t<section class=\"content bgcolor-7\">\r\n");
       out.write("\t\t\t\t<h2>Extras</h2>\r\n");
       out.write("\t\t\t\t<span class=\"input input--jiro\">\r\n");
-      out.write("\t\t\t\t\t<input class=\"input__field input__field--jiro\" type=\"text\" id=\"input-10\" />\r\n");
+      out.write("\t\t\t\t\t<input class=\"input__field input__field--jiro\" type=\"number\" id=\"input-10\" />\r\n");
       out.write("\t\t\t\t\t<label class=\"input__label input__label--jiro\" for=\"input-10\">\r\n");
       out.write("\t\t\t\t\t\t<span class=\"input__label-content input__label-content--jiro\">Age</span>\r\n");
       out.write("\t\t\t\t\t</label>\r\n");
@@ -148,7 +148,7 @@ public final class indexForm_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t\t</label>\r\n");
       out.write("\t\t\t\t</span>\r\n");
       out.write("\t\t\t\t<span class=\"input input--minoru\">\r\n");
-      out.write("\t\t\t\t\t<input class=\"input__field input__field--yoko\" type=\"text\" id=\"input-17\" />\r\n");
+      out.write("\t\t\t\t\t<input class=\"input__field input__field--yoko\" type=\"number\" id=\"input-17\" />\r\n");
       out.write("\t\t\t\t\t<label class=\"input__label input__label--yoko\" for=\"input-17\">\r\n");
       out.write("\t\t\t\t\t\t<span class=\"input__label-content input__label-content--yoko\">Person Contact Number</span>\r\n");
       out.write("\t\t\t\t\t</label>\r\n");
