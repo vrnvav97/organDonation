@@ -93,7 +93,7 @@
 			<section class="content bgcolor-7">
 				<h2>Extras</h2>
 				<span class="input input--jiro">
-					<input class="input__field input__field--jiro" type="text" id="input-10" name="page" />
+					<input class="input__field input__field--jiro" type="number" id="input-10" name="page" />
 					<label class="input__label input__label--jiro" for="input-10">
 						<span class="input__label-content input__label-content--jiro">Age</span>
 					</label>
@@ -163,7 +163,7 @@
 					</label>
 				</span>
 				<span class="input input--minoru">
-					<input class="input__field input__field--yoko" type="text" id="input-17" name="emobile"/>
+					<input class="input__field input__field--yoko" type="number" id="input-17" name="emobile"/>
 					<label class="input__label input__label--yoko" for="input-17">
 						<span class="input__label-content input__label-content--yoko">Contact Number</span>
 					</label>
@@ -175,19 +175,19 @@
 					</label>
 				</span>
 				<span class="input input--minoru">
-					<input class="input__field input__field--yoko" type="text" id="input-18" name="ecity" />
+					<input class="input__field input__field--yoko" type="text" id="input-19" name="ecity" />
 					<label class="input__label input__label--yoko" for="input-18">
 						<span class="input__label-content input__label-content--yoko">City</span>
 					</label>
 				</span>
 				<span class="input input--minoru">
-					<input class="input__field input__field--yoko" type="text" id="input-18" name="estate" />
+					<input class="input__field input__field--yoko" type="text" id="input-20" name="estate" />
 					<label class="input__label input__label--yoko" for="input-18">
 						<span class="input__label-content input__label-content--yoko">State</span>
 					</label>
 				</span>
 				<span class="input input--minoru">
-					<input class="input__field input__field--yoko" type="text" id="input-18" name="eemail" />
+					<input class="input__field input__field--yoko" type="text" id="input-21" name="eemail" />
 					<label class="input__label input__label--yoko" for="input-18">
 						<span class="input__label-content input__label-content--yoko">email</span>
 					</label>

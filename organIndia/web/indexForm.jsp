@@ -57,7 +57,7 @@
 			<section class="content bgcolor-7">
 				<h2>Extras</h2>
 				<span class="input input--jiro">
-					<input class="input__field input__field--jiro" type="text" id="input-10" />
+					<input class="input__field input__field--jiro" type="number" id="input-10" />
 					<label class="input__label input__label--jiro" for="input-10">
 						<span class="input__label-content input__label-content--jiro">Age</span>
 					</label>
@@ -105,7 +105,7 @@
 					</label>
 				</span>
 				<span class="input input--minoru">
-					<input class="input__field input__field--yoko" type="text" id="input-17" />
+					<input class="input__field input__field--yoko" type="number" id="input-17" />
 					<label class="input__label input__label--yoko" for="input-17">
 						<span class="input__label-content input__label-content--yoko">Person Contact Number</span>
 					</label>
