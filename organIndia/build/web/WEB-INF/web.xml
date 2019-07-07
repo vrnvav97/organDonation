@@ -12,6 +12,14 @@
         <servlet-name>DonorInfo</servlet-name>
         <servlet-class>servlets.DonorInfo</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HospitalLogin</servlet-name>
+        <servlet-class>servlets.HospitalLogin</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminLogin</servlet-name>
+        <servlet-class>servlets.AdminLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>DonorInfo</servlet-name>
         <url-pattern>/DonorInfo</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HospitalLogin</servlet-name>
+        <url-pattern>/HospitalLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLogin</servlet-name>
+        <url-pattern>/AdminLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -22,24 +22,66 @@ import java.util.HashMap;
 public class DbConnect {
     private Connection c;
     private Statement st;
-    private PreparedStatement checkLogin,insertUser1,insertUser2,getPhoto,searchPeople;
+    private PreparedStatement checkLogin1,checkLogin2,checkLogin3,insertUser1,insertUser2,getPhoto,searchPeople;
     public DbConnect() throws Exception{
         Class.forName("com.mysql.jdbc.Driver");
         c=DriverManager.getConnection(
    "jdbc:mysql://localhost/donateindia","root","incapp");
         st=c.createStatement();
-        checkLogin=c.prepareStatement(
+        checkLogin1=c.prepareStatement(
     "select * from logindetails where username=? and password=?");
+        checkLogin2=c.prepareStatement(
+    "select * from admin where username=? and password=?");
+        checkLogin3=c.prepareStatement(
+    "select * from hospitallogin where username=? and password=?");
         insertUser1=c.prepareStatement(
     "insert into logindetails values(?,?,?,?)");
         insertUser2=c.prepareStatement(
     "insert into donor_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     }
     
-    public HashMap checkLogin(String u,String p) throws SQLException{
-        checkLogin.setString(1, u);
-        checkLogin.setString(2, p);
-        ResultSet rs=checkLogin.executeQuery();
+    public HashMap checkLogin1(String u,String p) throws SQLException{
+        checkLogin1.setString(1, u);
+        checkLogin1.setString(2, p);
+        ResultSet rs=checkLogin1.executeQuery();
+        if(rs.next()){
+            HashMap<String,String> userDetails=new HashMap();
+            userDetails.put("username", rs.getString("username"));
+            userDetails.put("password", rs.getString("password"));
+//            userDetails.put("phone", rs.getString("phone"));
+//            userDetails.put("gender", rs.getString("gender"));
+//            userDetails.put("dob", rs.getDate("dob"));
+//            userDetails.put("state", rs.getString("state"));
+//            userDetails.put("city", rs.getString("city"));
+//            userDetails.put("area", rs.getString("area"));
+            return userDetails;
+        }else{
+            return null;
+        }
+    }
+    public HashMap checkLogin2(String u,String p) throws SQLException{
+        checkLogin2.setString(1, u);
+        checkLogin2.setString(2, p);
+        ResultSet rs=checkLogin2.executeQuery();
+        if(rs.next()){
+            HashMap<String,String> userDetails=new HashMap();
+            userDetails.put("username", rs.getString("username"));
+            userDetails.put("password", rs.getString("password"));
+//            userDetails.put("phone", rs.getString("phone"));
+//            userDetails.put("gender", rs.getString("gender"));
+//            userDetails.put("dob", rs.getDate("dob"));
+//            userDetails.put("state", rs.getString("state"));
+//            userDetails.put("city", rs.getString("city"));
+//            userDetails.put("area", rs.getString("area"));
+            return userDetails;
+        }else{
+            return null;
+        }
+    }
+    public HashMap checkLogin3(String u,String p) throws SQLException{
+        checkLogin3.setString(1, u);
+        checkLogin3.setString(2, p);
+        ResultSet rs=checkLogin3.executeQuery();
         if(rs.next()){
             HashMap<String,String> userDetails=new HashMap();
             userDetails.put("username", rs.getString("username"));

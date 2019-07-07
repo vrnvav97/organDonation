@@ -10,7 +10,9 @@
       <link rel="stylesheet" href="login/dist/style.css">
   
 </head>
-
+<% String temp=(String)session.getAttribute("msg");
+    System.out.println (temp);
+%>
 <body>
 
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
@@ -110,7 +112,11 @@
 
 
 
-
+        <script> 
+            if ("<%=temp%>" == "Wrong Entries!")
+            alert ("Wrong Entries!");
+            console.log ("<%=temp%>");
+        </script>
 </body>
 
 </html>

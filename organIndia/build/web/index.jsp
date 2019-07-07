@@ -171,6 +171,7 @@
     String m,href;
         if (session.getAttribute("userDetails") == null)
         {
+           
              m = "Login";
              href = "indexLogin.jsp";
         }
@@ -178,7 +179,8 @@
         {
             HashMap<String,String> hm = (HashMap)session.getAttribute("userDetails");
              m = hm.get("username");
-             href = "profile.jsp";
+             
+             href = "Profile.jsp";
         }
         %>    
           <li><a id="gal" href=<%=href%>><%=m%></a></li>
@@ -307,31 +309,31 @@
           <!-- <a href="early-childhood-developement.aspx"><img src="images/icons/developmen.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
           <img src="cheating/images/flat/128e.png" style="color: white">
         </center>
-        <a href="early-childhood-developement.aspx" style="color: white">Eye</a> </div>
+        <a href="Eye.jsp" style="color: white">Eye</a> </div>
       <div class="school-part2">
         <center>
           <!-- <a href="junior-school.aspx"><img src="images/icons/junior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
           <img src="cheating/images/flat/128h.png">
         </center>
-        <a href="junior-school.aspx" style="color: white">Heart</a> </div>
+        <a href="Heart.jsp" style="color: white">Heart</a> </div>
       <div class="school-part2">
         <center>
          <!--  <a href="middle-school.aspx"><img src="images/icons/middle.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
          <img src="cheating/images/flat/128l.png">
         </center>
-        <a href="middle-school.aspx" style="color: white">Liver</a> </div>
+        <a href="Liver.jsp" style="color: white">Liver</a> </div>
       <div class="school-part2">
         <center>
           <!-- <a href="senior-school.aspx"><img src="images/icons/senior.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
           <img src="cheating/images/flat/128k.png">
         </center>
-        <a href="senior-school.aspx" style="color: white">Kidney</a> </div>
+        <a href="Kidney.jsp" style="color: white">Kidney</a> </div>
       <div class="school-part2">
         <center>
           <!-- <a href="learning-center.aspx"><img src="images/icons/learning.png" class="img-responsive img-rotate" alt="St. Joseph, Goraknath"/></a> -->
           <img src="cheating/images/flat/128ll.png">
         </center>
-        <a href="learning-center.aspx" style="color: white">Lungs</a> </div>
+        <a href="Lungs.jsp" style="color: white">Lungs</a> </div>
         </div>
 </div>
 <!-------------- Google trends Section --------------->
@@ -495,6 +497,7 @@
     $(window).load(function () {
         $('#myModal').modal('show');
     });
+var myVAR="<%out.print(m);%>";
   </script>
 </form>
 </body>
