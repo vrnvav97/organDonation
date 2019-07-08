@@ -34,7 +34,7 @@
 				        <form class="form-signin" onsubmit=validateSignIn(); action="LoginServlet" method="post" name="form">
           <label for="username">Username</label>
 		  <input  class="form-styling" type="text" name="username" id="username"  />
-		  <div id="fakebox-text">Search Google or type a URL</div>
+		  <!--<div id="fakebox-text">Search Google or type a URL</div>-->
 		  
 		  <label for="password">Password</label>
           <input class="form-styling" type="password" name="password" id="password"/>
@@ -50,13 +50,13 @@
          <!--  <a id="refresh" value="Refresh" onClick="history.go()"><img src="left-arrow.png" style="max-width: 35px" ></a> -->
 				        </form>
 						
-						<form class="form-signup" onsubmit=validateSignUp(); action="" method="post" name="form">
+						<form class="form-signup" onsubmit=validateSignUp(); action="SignUp" method="post" name="form">
           <label for="fullname">Full name</label>
           <input class="form-styling" type="text" name="fullname" id="fullname" placeholder=""/>
           <label for="email">Email</label>
           <input class="form-styling" type="text" name="email" id="email" placeholder=""/>
           <label for="password">Password</label>
-          <input class="form-styling" type="password" name="password1" id="password1"placeholder=""/>
+          <input class="form-styling" type="password" name="password" id="password1"placeholder=""/>
           <label for="confirmpassword">Confirm password</label>
           <input class="form-styling" type="password" name="confirmpassword" id="confirmpassword" placeholder=""/>
           <input type="submit" value="Sign Up" class="btn-signin" style="padding:5px;text-transform: uppercase;font-size: 13px;font-weight: 700;margin-top: 30px">

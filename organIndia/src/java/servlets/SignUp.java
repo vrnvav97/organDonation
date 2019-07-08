@@ -21,7 +21,7 @@ public class SignUp extends HttpServlet {
         
      HttpSession session=request.getSession();
         try{
-            String n=request.getParameter("name");
+            String n=request.getParameter("fullname");
             
             String e=request.getParameter("email");
             
@@ -35,13 +35,15 @@ public class SignUp extends HttpServlet {
             userDetails.put("email", e);
             userDetails.put("name", n);
             userDetails.put("password", p);
+            System.out.println(s);
+            userDetails.put("designation", "user");
             
             db.DbConnect db=new db.DbConnect();
             String m=db.insertUser1(userDetails);
             if(m.equalsIgnoreCase("Success")){
                 userDetails.remove("password");
                 session.setAttribute("userDetails", userDetails);
-                response.sendRedirect("profile.jsp");
+                response.sendRedirect("indexLogin.jsp");
             }else if(m.equalsIgnoreCase("Already")){
                 session.setAttribute("msg", "Email ID Already Exist!");
                 response.sendRedirect("index.jsp");

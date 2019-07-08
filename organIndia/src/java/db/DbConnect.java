@@ -35,7 +35,7 @@ public class DbConnect {
 //        checkLogin3=c.prepareStatement(
 //    "select * from hospitallogin where username=? and password=?");
         insertUser1=c.prepareStatement(
-    "insert into logindetails values(?,?,?,?)");
+    "insert into user values(?,?,?,?,?)");
         insertUser2=c.prepareStatement(
     "insert into donor_info values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
     }
@@ -86,12 +86,7 @@ public class DbConnect {
             HashMap<String,String> userDetails=new HashMap();
             userDetails.put("username", rs.getString("username"));
             userDetails.put("password", rs.getString("password"));
-//            userDetails.put("phone", rs.getString("phone"));
-//            userDetails.put("gender", rs.getString("gender"));
-//            userDetails.put("dob", rs.getDate("dob"));
-//            userDetails.put("state", rs.getString("state"));
-//            userDetails.put("city", rs.getString("city"));
-//            userDetails.put("area", rs.getString("area"));
+
             return userDetails;
         }else{
             return null;
@@ -103,6 +98,7 @@ public class DbConnect {
         insertUser1.setString(2, (String)userDetails.get("password"));
         insertUser1.setString(3, (String)userDetails.get("name"));
         insertUser1.setString(4, (String)userDetails.get("email"));
+        insertUser1.setString(5, (String)userDetails.get("designation"));
         int x=insertUser1.executeUpdate();
         if(x!=0)
            return "Success";
