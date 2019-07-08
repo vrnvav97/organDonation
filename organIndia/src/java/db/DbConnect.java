@@ -29,11 +29,11 @@ public class DbConnect {
    "jdbc:mysql://localhost/donateindia","root","incapp");
         st=c.createStatement();
         checkLogin1=c.prepareStatement(
-    "select * from logindetails where username=? and password=?");
-        checkLogin2=c.prepareStatement(
-    "select * from admin where username=? and password=?");
-        checkLogin3=c.prepareStatement(
-    "select * from hospitallogin where username=? and password=?");
+    "select * from ( select a.username,a.email,a.name,a.password from admin a union select h.username, h.email, h.name, h.password from hospital h union select u.username,u.email,u.name,u.password from user u) foo where username=? and password=?");
+//        checkLogin2=c.prepareStatement(
+//    "select * from admin where username=? and password=?");
+//        checkLogin3=c.prepareStatement(
+//    "select * from hospitallogin where username=? and password=?");
         insertUser1=c.prepareStatement(
     "insert into logindetails values(?,?,?,?)");
         insertUser2=c.prepareStatement(
@@ -96,7 +96,7 @@ public class DbConnect {
         }else{
             return null;
         }
-    }
+    }   
     public String insertUser1(HashMap userDetails)throws SQLException{
         try{
         insertUser1.setString(1, (String)userDetails.get("username"));
