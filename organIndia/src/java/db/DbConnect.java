@@ -22,7 +22,7 @@ import java.util.HashMap;
 public class DbConnect {
     private Connection c;
     private Statement st;
-    private PreparedStatement checkLogin1,checkLogin2,checkLogin3,insertUser1,insertUser2,getPhoto,searchPeople;
+    private PreparedStatement checkLogin1,checkEmail,checkLogin3,insertUser1,insertUser2,getPhoto,searchPeople;
     public DbConnect() throws Exception{
         Class.forName("com.mysql.jdbc.Driver");
         c=DriverManager.getConnection(
@@ -30,8 +30,8 @@ public class DbConnect {
         st=c.createStatement();
         checkLogin1=c.prepareStatement(
     "select * from ( select a.username,a.email,a.name,a.password from admin a union select h.username, h.email, h.name, h.password from hospital h union select u.username,u.email,u.name,u.password from user u) foo where username=? and password=?");
-//        checkLogin2=c.prepareStatement(
-//    "select * from admin where username=? and password=?");
+        checkEmail=c.prepareStatement(
+    "select * from donor_info where per_email=?");
 //        checkLogin3=c.prepareStatement(
 //    "select * from hospitallogin where username=? and password=?");
         insertUser1=c.prepareStatement(
@@ -48,6 +48,7 @@ public class DbConnect {
             HashMap<String,String> userDetails=new HashMap();
             userDetails.put("username", rs.getString("username"));
             userDetails.put("password", rs.getString("password"));
+            userDetails.put("email", rs.getString("email"));
 //            userDetails.put("phone", rs.getString("phone"));
 //            userDetails.put("gender", rs.getString("gender"));
 //            userDetails.put("dob", rs.getDate("dob"));
@@ -59,22 +60,43 @@ public class DbConnect {
             return null;
         }
     }
-    public HashMap checkLogin2(String u,String p) throws SQLException{
-        checkLogin2.setString(1, u);
-        checkLogin2.setString(2, p);
-        ResultSet rs=checkLogin2.executeQuery();
+    public HashMap checkEmail(String e) throws SQLException{
+        checkEmail.setString(1, e);
+//      c
+        ResultSet rs=checkEmail.executeQuery();
+        
         if(rs.next()){
-            HashMap<String,String> userDetails=new HashMap();
-            userDetails.put("username", rs.getString("username"));
-            userDetails.put("password", rs.getString("password"));
-//            userDetails.put("phone", rs.getString("phone"));
-//            userDetails.put("gender", rs.getString("gender"));
-//            userDetails.put("dob", rs.getDate("dob"));
-//            userDetails.put("state", rs.getString("state"));
-//            userDetails.put("city", rs.getString("city"));
-//            userDetails.put("area", rs.getString("area"));
+            HashMap userDetails=new HashMap();
+           
+            userDetails.put("pcountry",rs.getString("per_country"));
+            userDetails.put("pfirstname",rs.getString("per_fisrt_name"));
+            userDetails.put("plastname",rs.getString("per_last_name"));
+            userDetails.put("page",rs.getInt("per_age"));
+            userDetails.put("pgender", rs.getString("per_gender"));
+            userDetails.put("pbloodgroup", rs.getString("per_bloodgroup"));
+            userDetails.put("organSelected",rs.getString("organSelect"));
+            userDetails.put("paddress",rs.getString("per_address"));
+            userDetails.put("pcity",rs.getString("per_city"));
+            userDetails.put("pdistrict",rs.getString("per_district"));
+            userDetails.put("ppincode",rs.getString("per_pincode"));
+            userDetails.put("pstate",rs.getString("per_state"));
+            userDetails.put("pemail", rs.getString("per_email"));
+            userDetails.put("pmobile", rs.getString("per_mobile"));
+            userDetails.put("ename",rs.getString("eme_name"));
+            userDetails.put("relation",rs.getString("eme_relationship"));
+            userDetails.put("ecity",rs.getString("eme_city"));
+            userDetails.put("estate",rs.getString("eme_state"));
+            userDetails.put("eemail",rs.getString("eme_email"));
+            userDetails.put("emobile",rs.getString("eme_mobile"));
+            userDetails.put("status",rs.getString("status"));
+            userDetails.put("organdonated",rs.getString("organdonated"));
+            userDetails.put("donorhospital",rs.getString("donorhospital"));
+            userDetails.put("hospitaladdress",rs.getString("hospitaladdress"));
+            userDetails.put("hospitalcity",rs.getString("hospitalcity"));
+//            System.out.println("helloo");
             return userDetails;
         }else{
+             System.out.println("helloo");
             return null;
         }
     }
@@ -86,6 +108,7 @@ public class DbConnect {
             HashMap<String,String> userDetails=new HashMap();
             userDetails.put("username", rs.getString("username"));
             userDetails.put("password", rs.getString("password"));
+            userDetails.put("email", rs.getString("email"));
 
             return userDetails;
         }else{
@@ -97,6 +120,7 @@ public class DbConnect {
         insertUser1.setString(1, (String)userDetails.get("username"));
         insertUser1.setString(2, (String)userDetails.get("password"));
         insertUser1.setString(3, (String)userDetails.get("name"));
+        
         insertUser1.setString(4, (String)userDetails.get("email"));
         insertUser1.setString(5, (String)userDetails.get("designation"));
         int x=insertUser1.executeUpdate();

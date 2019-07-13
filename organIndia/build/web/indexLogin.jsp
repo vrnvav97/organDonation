@@ -28,9 +28,10 @@
     <div ng-app ng-init="checked = false">
 
 
-      <div class="message"><label for="username" >Successfully Signed Up!</label></div>
-
-
+        <div class="message"> <label for="username" id="check"></label></div>
+      
+<!--      -->
+      
 				        <form class="form-signin" onsubmit=validateSignIn(); action="LoginServlet" method="post" name="form">
           <label for="username">Username</label>
 		  <input  class="form-styling" type="text" name="username" id="username"  />
@@ -114,9 +115,12 @@
 
         <script> 
             if ("<%=temp%>" == "Wrong Entries!")
-            alert ("Wrong Entries!");
-            console.log ("<%=temp%>");
+           var a = document.getElementById("check");
+           a.innerText = "Wrong Entries !";
+           
         </script>
+ 
+           
 </body>
 
 </html>

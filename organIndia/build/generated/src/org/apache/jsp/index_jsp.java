@@ -162,7 +162,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <div class=\"collapse navbar-collapse\" id=\"myNavbar\">\r\n");
       out.write("        <ul class=\"nav navbar-nav\">\r\n");
       out.write("          <li><a id=\"home\" href=\"index.jsp\">Home</a></li>\r\n");
-      out.write("          <li><a id=\"home\" href=\"#\">Become a donor</a></li>\r\n");
+      out.write("          <li><a id=\"becomeADonor\" href=\"#\">Become a donor</a></li>\r\n");
       out.write("\r\n");
       out.write("\r\n");
       out.write("          \r\n");
@@ -211,6 +211,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     String m,href;
         if (session.getAttribute("userDetails") == null)
         {
+           
              m = "Login";
              href = "indexLogin.jsp";
         }
@@ -545,6 +546,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 out.print(m);
       out.write("\";\r\n");
       out.write("  </script>\r\n");
+      out.write("  \r\n");
       out.write("</form>\r\n");
       out.write("</body>\r\n");
       out.write("</html>\r\n");

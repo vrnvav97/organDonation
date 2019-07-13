@@ -53,6 +53,9 @@ public final class indexLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("      <link rel=\"stylesheet\" href=\"login/dist/style.css\">\r\n");
       out.write("  \r\n");
       out.write("</head>\r\n");
+ String temp=(String)session.getAttribute("msg");
+    System.out.println (temp);
+
       out.write("\r\n");
       out.write("<body>\r\n");
       out.write("\r\n");
@@ -75,7 +78,7 @@ public final class indexLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\t\t\t\t        <form class=\"form-signin\" onsubmit=validateSignIn(); action=\"LoginServlet\" method=\"post\" name=\"form\">\r\n");
       out.write("          <label for=\"username\">Username</label>\r\n");
       out.write("\t\t  <input  class=\"form-styling\" type=\"text\" name=\"username\" id=\"username\"  />\r\n");
-      out.write("\t\t  <div id=\"fakebox-text\">Search Google or type a URL</div>\r\n");
+      out.write("\t\t  <!--<div id=\"fakebox-text\">Search Google or type a URL</div>-->\r\n");
       out.write("\t\t  \r\n");
       out.write("\t\t  <label for=\"password\">Password</label>\r\n");
       out.write("          <input class=\"form-styling\" type=\"password\" name=\"password\" id=\"password\"/>\r\n");
@@ -91,13 +94,13 @@ public final class indexLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("         <!--  <a id=\"refresh\" value=\"Refresh\" onClick=\"history.go()\"><img src=\"left-arrow.png\" style=\"max-width: 35px\" ></a> -->\r\n");
       out.write("\t\t\t\t        </form>\r\n");
       out.write("\t\t\t\t\t\t\r\n");
-      out.write("\t\t\t\t\t\t<form class=\"form-signup\" onsubmit=validateSignUp(); action=\"\" method=\"post\" name=\"form\">\r\n");
+      out.write("\t\t\t\t\t\t<form class=\"form-signup\" onsubmit=validateSignUp(); action=\"SignUp\" method=\"post\" name=\"form\">\r\n");
       out.write("          <label for=\"fullname\">Full name</label>\r\n");
       out.write("          <input class=\"form-styling\" type=\"text\" name=\"fullname\" id=\"fullname\" placeholder=\"\"/>\r\n");
       out.write("          <label for=\"email\">Email</label>\r\n");
       out.write("          <input class=\"form-styling\" type=\"text\" name=\"email\" id=\"email\" placeholder=\"\"/>\r\n");
       out.write("          <label for=\"password\">Password</label>\r\n");
-      out.write("          <input class=\"form-styling\" type=\"password\" name=\"password1\" id=\"password1\"placeholder=\"\"/>\r\n");
+      out.write("          <input class=\"form-styling\" type=\"password\" name=\"password\" id=\"password1\"placeholder=\"\"/>\r\n");
       out.write("          <label for=\"confirmpassword\">Confirm password</label>\r\n");
       out.write("          <input class=\"form-styling\" type=\"password\" name=\"confirmpassword\" id=\"confirmpassword\" placeholder=\"\"/>\r\n");
       out.write("          <input type=\"submit\" value=\"Sign Up\" class=\"btn-signin\" style=\"padding:5px;text-transform: uppercase;font-size: 13px;font-weight: 700;margin-top: 30px\">\r\n");
@@ -153,7 +156,15 @@ public final class indexLogin_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("\r\n");
+      out.write("        <script> \r\n");
+      out.write("            if (\"");
+      out.print(temp);
+      out.write("\" == \"Wrong Entries!\")\r\n");
+      out.write("            alert (\"Wrong Entries!\");\r\n");
+      out.write("            console.log (\"");
+      out.print(temp);
+      out.write("\");\r\n");
+      out.write("        </script>\r\n");
       out.write("</body>\r\n");
       out.write("\r\n");
       out.write("</html>\r\n");

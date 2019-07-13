@@ -3,6 +3,7 @@ package org.apache.jsp;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
+import java.util.HashMap;
 
 public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
@@ -41,6 +42,16 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\r\n");
+      out.write("\r\n");
+
+    HashMap userDetails=(HashMap)session.getAttribute("userDetails");
+    if(userDetails!=null){
+
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
+      out.write("\r\n");
       out.write("<!DOCTYPE html>\r\n");
       out.write("<html lang=\"en\" >\r\n");
       out.write("\r\n");
@@ -63,6 +74,10 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("  <h1>Dashboard</h1>\r\n");
       out.write("  <div class=\"inner-container\">\r\n");
       out.write("    <div class=\"grid-wrapper\">\r\n");
+      out.write("        \r\n");
+      out.write("        \r\n");
+      out.write("        \r\n");
+      out.write("        <a href=\"test\"></a>\r\n");
       out.write("      <div class=\"grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
       out.write("          <div class=\"icon\">\r\n");
@@ -72,20 +87,25 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            Profile Information\r\n");
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
+      out.write("          ");
+      out.write("\r\n");
+      out.write("          \r\n");
       out.write("        <div class=\"grid-overlay\">\r\n");
       out.write("          <div class=\"overlay-content-wrapper\">\r\n");
       out.write("\r\n");
-      out.write("            <div class=\"overlay-header\">\r\n");
-      out.write("              Profile Information\r\n");
+      out.write("                <div class=\"overlay-header\">\r\n");
+      out.write("                      Profile Information\r\n");
       out.write("            </div>\r\n");
       out.write("            <div class=\"overlay-label\">\r\n");
-      out.write("              Get to know Information about your Profile\r\n");
+      out.write("                Get to know Information about your Profile\r\n");
       out.write("            </div>\r\n");
       out.write("          </div>\r\n");
       out.write("\r\n");
       out.write("        </div>\r\n");
       out.write("\r\n");
       out.write("      </div>\r\n");
+      out.write("    </a> \r\n");
+      out.write("        \r\n");
       out.write("      <div class=\"grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
       out.write("          <div class=\"icon\">\r\n");
@@ -103,7 +123,7 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("              Become a Donor\r\n");
       out.write("            </div>\r\n");
       out.write("            <div class=\"overlay-label\">\r\n");
-      out.write("              Get a chance to become a Donor and do a social cause\r\n");
+      out.write("                <a href=\"index1.jsp\">Get a chance to become a Donor and do a social cause</a>\r\n");
       out.write("            </div>\r\n");
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
@@ -276,6 +296,15 @@ public final class dashboard_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("</body>\r\n");
       out.write("\r\n");
       out.write("</html>\r\n");
+       
+    }else{
+        session.setAttribute("msg", "Plz login First!");
+        response.sendRedirect("home.jsp");
+        
+    }
+
+      out.write('\r');
+      out.write('\n');
     } catch (Throwable t) {
       if (!(t instanceof SkipPageException)){
         out = _jspx_out;

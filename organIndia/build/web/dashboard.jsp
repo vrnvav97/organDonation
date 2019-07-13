@@ -1,3 +1,12 @@
+
+<%@page import="java.util.HashMap"%>
+<%
+    HashMap userDetails=(HashMap)session.getAttribute("userDetails");
+    if(userDetails!=null){
+%>
+
+
+
 <!DOCTYPE html>
 <html lang="en" >
 
@@ -20,6 +29,10 @@
   <h1>Dashboard</h1>
   <div class="inner-container">
     <div class="grid-wrapper">
+        
+        
+        
+        <a href="ProfileInfo">
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -29,20 +42,24 @@
             Profile Information
           </div>
         </div>
+          
+          
         <div class="grid-overlay">
           <div class="overlay-content-wrapper">
 
-            <div class="overlay-header">
-              Profile Information
+                <div class="overlay-header">
+                      Profile Information
             </div>
             <div class="overlay-label">
-              Get to know Information about your Profile
+                Get to know Information about your Profile
             </div>
           </div>
 
         </div>
 
       </div>
+    </a> 
+        
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -60,7 +77,7 @@
               Become a Donor
             </div>
             <div class="overlay-label">
-              Get a chance to become a Donor and do a social cause
+                <a href="index1.jsp">Get a chance to become a Donor and do a social cause</a>
             </div>
           </div>
         </div>
@@ -233,3 +250,11 @@
 </body>
 
 </html>
+<%       
+    }else{
+        session.setAttribute("msg", "Plz login First!");
+        System.out.println ("Error is here");
+        response.sendRedirect("home.jsp");
+        
+    }
+%>

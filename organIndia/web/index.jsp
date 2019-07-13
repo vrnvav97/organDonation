@@ -121,8 +121,8 @@
 
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <li><a id="home" href="index.jsp">Home</a></li>
-          <li><a id="home" href="#">Become a donor</a></li>
+          <li><a id="home" href="">Home</a></li>
+          <li><a id="becomeADonor" href="#">Become a donor</a></li>
 
 
           
@@ -168,7 +168,7 @@
           <!-- <li><a id="faculty" href="faculty.aspx">Faculty</a></li> -->
 
 <%
-    String m,href;
+    String m,href,userNameInJs="";
         if (session.getAttribute("userDetails") == null)
         {
            
@@ -179,7 +179,7 @@
         {
             HashMap<String,String> hm = (HashMap)session.getAttribute("userDetails");
              m = hm.get("username");
-             
+              userNameInJs = m;
              href = "Profile.jsp";
         }
         %>    
@@ -499,6 +499,19 @@
     });
 var myVAR="<%out.print(m);%>";
   </script>
+  <script>
+      var a = document.getElementById("home");
+      if ("<%=userNameInJs%>"=="")
+      {
+        a.innerText = "Home";
+        a.setAttribute("href","index.jsp");
+    }
+      else
+      {
+         a.innerText = "Dashboard";
+         a.setAttribute("href","dashboard.jsp");
+     }
+        </script>
 </form>
 </body>
 </html>
