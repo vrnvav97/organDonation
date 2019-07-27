@@ -59,7 +59,7 @@
 
       </div>
     </a> 
-        
+     
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -82,6 +82,7 @@
           </div>
         </div>
       </div>
+        
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -126,6 +127,7 @@
           </div>
         </div>
       </div>
+        <a href="PrevoiusInfo">
       <div class="grid user-grid">
         <div class="grid-header">
           <div class="icon">
@@ -144,6 +146,7 @@
             <i class="fa fa-users" aria-hidden="true"></i>
 
           </div> -->
+          
           <div class="label">
             View Previous Data
           </div>
@@ -160,6 +163,7 @@
           </div>
         </div>
       </div>
+        </a>
     <!--  <div class="grid">
         <div class="grid-header">
           <div class="icon">

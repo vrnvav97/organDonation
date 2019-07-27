@@ -1,6 +1,6 @@
 <%@page import="java.util.HashMap"%>
 <%
-    HashMap userDetails=(HashMap)session.getAttribute("userDetails");
+    HashMap userDetails=(HashMap)session.getAttribute("profileInfo");
     if(userDetails!=null){
 %>
 <html lang="en">
@@ -29,7 +29,7 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
                                     <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pfirstname") %></p></div></li>
-					<li><a href="profile.jsp">Home</a></li>
+					<li><a href="index.jsp">Home</a></li>
 					<li><a href="Logout.jsp">Logout</a><li>
 				</ul>			
 			</div>
@@ -79,7 +79,7 @@
 										<button type="submit" class="btn btn-primary" formaction="changepassword.jsp">Change Password</button>
 									</div>		
 								</div>
-							</form>
+</form>
 					</div>
 				<div class="col-lg-6">
                                     <%

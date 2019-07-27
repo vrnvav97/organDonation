@@ -22,16 +22,18 @@ import java.util.HashMap;
 public class DbConnect {
     private Connection c;
     private Statement st;
-    private PreparedStatement checkLogin1,checkEmail,checkLogin3,insertUser1,insertUser2,getPhoto,searchPeople;
+    private PreparedStatement checkLogin1,checkEmailUser,checkEmailHospital,checkLogin3,insertUser1,insertUser2,getPhoto,searchPeople;
     public DbConnect() throws Exception{
         Class.forName("com.mysql.jdbc.Driver");
         c=DriverManager.getConnection(
    "jdbc:mysql://localhost/donateindia","root","incapp");
         st=c.createStatement();
         checkLogin1=c.prepareStatement(
-    "select * from ( select a.username,a.email,a.name,a.password from admin a union select h.username, h.email, h.name, h.password from hospital h union select u.username,u.email,u.name,u.password from user u) foo where username=? and password=?");
-        checkEmail=c.prepareStatement(
+    "select * from ( select a.username,a.email,a.name,a.password,a.designation from admin a union select h.username, h.email, h.name, h.password, h.designation from hospital h union select u.username,u.email,u.name,u.password, u.designation from user u) foo where username=? and password=?");
+        checkEmailUser=c.prepareStatement(
     "select * from donor_info where per_email=?");
+        checkEmailHospital=c.prepareStatement(
+    "select * from hospital where email=?");
 //        checkLogin3=c.prepareStatement(
 //    "select * from hospitallogin where username=? and password=?");
         insertUser1=c.prepareStatement(
@@ -49,6 +51,10 @@ public class DbConnect {
             userDetails.put("username", rs.getString("username"));
             userDetails.put("password", rs.getString("password"));
             userDetails.put("email", rs.getString("email"));
+             userDetails.put("designation", rs.getString("designation"));
+//            userDetails.put("designation",rs.getString("designation"));
+//            System.out.println (userDetails.get("designation"));
+            
 //            userDetails.put("phone", rs.getString("phone"));
 //            userDetails.put("gender", rs.getString("gender"));
 //            userDetails.put("dob", rs.getDate("dob"));
@@ -60,10 +66,10 @@ public class DbConnect {
             return null;
         }
     }
-    public HashMap checkEmail(String e) throws SQLException{
-        checkEmail.setString(1, e);
+    public HashMap checkEmailUser(String e) throws SQLException{
+        checkEmailUser.setString(1, e);
 //      c
-        ResultSet rs=checkEmail.executeQuery();
+        ResultSet rs=checkEmailUser.executeQuery();
         
         if(rs.next()){
             HashMap userDetails=new HashMap();
@@ -100,21 +106,30 @@ public class DbConnect {
             return null;
         }
     }
-    public HashMap checkLogin3(String u,String p) throws SQLException{
-        checkLogin3.setString(1, u);
-        checkLogin3.setString(2, p);
-        ResultSet rs=checkLogin3.executeQuery();
+     public HashMap checkEmailHospital(String e) throws SQLException{
+        checkEmailHospital.setString(1, e);
+//      c
+        ResultSet rs=checkEmailHospital.executeQuery();
+        
         if(rs.next()){
-            HashMap<String,String> userDetails=new HashMap();
-            userDetails.put("username", rs.getString("username"));
-            userDetails.put("password", rs.getString("password"));
-            userDetails.put("email", rs.getString("email"));
-
-            return userDetails;
+            HashMap hospitalDetails=new HashMap();
+           
+            hospitalDetails.put("name",rs.getString("name"));
+            hospitalDetails.put("address",rs.getString("address"));
+            hospitalDetails.put("city",rs.getString("city"));
+            hospitalDetails.put("phoneNumber",rs.getString("phoneNumber"));
+            hospitalDetails.put("state", rs.getString("state"));
+            hospitalDetails.put("departments", rs.getString("departments"));
+            hospitalDetails.put("totalBeds",rs.getInt("totalBeds"));
+            hospitalDetails.put("email",rs.getString("email"));
+            hospitalDetails.put("availableBeds",rs.getInt("availableBeds"));
+            
+            return hospitalDetails;
         }else{
+             System.out.println("helloo");
             return null;
         }
-    }   
+    }
     public String insertUser1(HashMap userDetails)throws SQLException{
         try{
         insertUser1.setString(1, (String)userDetails.get("username"));

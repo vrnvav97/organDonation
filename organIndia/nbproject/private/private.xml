@@ -3,17 +3,17 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/DonorInfo.java</file>
+            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/HospitalProfileInfo.java</file>
             <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/db/DbConnect.java</file>
-            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/indexLogin.jsp</file>
+            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/DonorInfo.java</file>
             <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/LoginServlet.java</file>
-            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/SignUp.java</file>
             <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/dashboard.jsp</file>
+            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/HospitalDashboard.jsp</file>
+            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/HospitalProfileDashboard.jsp</file>
+            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/ProfileDashboard.jsp</file>
             <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/index.jsp</file>
             <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/PrevoiusInfo.java</file>
-            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/Profile.jsp</file>
             <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/src/java/servlets/ProfileInfo.java</file>
-            <file>file:/C:/Users/Anshuman%20bhatt/Documents/GitHub/organDonation/organIndia/web/index1.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -15,6 +15,7 @@ public class LoginServlet extends HttpServlet {
             String p=request.getParameter("password");
             db.DbConnect db=new db.DbConnect();
             java.util.HashMap userDetails=db.checkLogin1(e, p);
+            System.out.println ("on servlet " + userDetails);
             if(userDetails!=null){
                 session.setAttribute("userDetails", userDetails);
                 response.sendRedirect("index.jsp");

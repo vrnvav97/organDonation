@@ -63,8 +63,10 @@ public final class HospitalDashboard_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("  <h1>Dashboard</h1>\r\n");
       out.write("  <div class=\"inner-container\">\r\n");
       out.write("    <div class=\"grid-wrapper\">\r\n");
+      out.write("        <a href=\"ProfileInfo\">\r\n");
       out.write("      <div class=\"grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
+      out.write("            \r\n");
       out.write("          <div class=\"icon\">\r\n");
       out.write("            <i class=\"fa fa-user\" aria-hidden=\"true\"></i>\r\n");
       out.write("          </div>\r\n");
@@ -86,6 +88,8 @@ public final class HospitalDashboard_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("        </div>\r\n");
       out.write("\r\n");
       out.write("      </div>\r\n");
+      out.write("        </a>\r\n");
+      out.write("        <a href=\"Departments\">\r\n");
       out.write("      <div class=\"grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
       out.write("          <div class=\"icon\">\r\n");
@@ -108,6 +112,8 @@ public final class HospitalDashboard_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
       out.write("      </div>\r\n");
+      out.write("        </a>\r\n");
+      out.write("        <a href=\"Beds\">\r\n");
       out.write("      <div class=\"grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
       out.write("          <div class=\"icon\">\r\n");
@@ -130,6 +136,8 @@ public final class HospitalDashboard_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
       out.write("      </div>\r\n");
+      out.write("        </a>\r\n");
+      out.write("        <a href=\"\">\r\n");
       out.write("      <div class=\"grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
       out.write("          <div class=\"icon\">\r\n");
@@ -152,13 +160,15 @@ public final class HospitalDashboard_jsp extends org.apache.jasper.runtime.HttpJ
       out.write("          </div>\r\n");
       out.write("        </div>\r\n");
       out.write("      </div>\r\n");
+      out.write("        </a>\r\n");
+      out.write("      <!-- \r\n");
       out.write("      <div class=\"grid user-grid\">\r\n");
       out.write("        <div class=\"grid-header\">\r\n");
       out.write("          <div class=\"icon\">\r\n");
       out.write("<i class=\"fa fa-user-circle-o\" aria-hidden=\"true\"></i>\r\n");
       out.write("\r\n");
       out.write("\r\n");
-      out.write("          </div>\r\n");
+      out.write("          </div> -->\r\n");
       out.write("          <!-- <div class=\"label\">\r\n");
       out.write("            Abhijeet Sutar\r\n");
       out.write("          </div>\r\n");

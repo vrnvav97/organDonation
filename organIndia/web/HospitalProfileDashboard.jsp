@@ -1,7 +1,7 @@
 <%@page import="java.util.HashMap"%>
 <%
-    HashMap userDetails=(HashMap)session.getAttribute("profileInfo");
-    if(userDetails!=null){
+    HashMap hospitalProfileDetails=(HashMap)session.getAttribute("hospitalProfileInfo");
+    if(hospitalProfileDetails!=null){
 %>
 <html lang="en">
   <head>
@@ -28,9 +28,9 @@
 			<a class="navbar-brand" href="Profile.jsp">Donate India</a>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
-                                    <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pfirstname") %></p></div></li>
+                                    <li><div class="navbar-text"><p>Welcome: <%= hospitalProfileDetails.get("name") %></p></div></li>
 					<li><a href="index.jsp">Home</a></li>
-					<li><a href="Logout.jsp">Logout</a><li>
+					<!--<li><a href="Logout.jsp">Logout</a><li>-->
 				</ul>			
 			</div>
 		</div>
@@ -48,30 +48,30 @@
 					<div class="col-lg-6">
 							<form action="" class="form-horizontal">
 								<div class="form-group">
-									<label for="email" class="control-label">Name:<font color="grey"><%= userDetails.get("pfirstname")+" " %><%= userDetails.get("plastname") %> </font></label>
+									<label for="email" class="control-label">Name:<font color="grey"><%= hospitalProfileDetails.get("name")%> </font></label>
 								</div><!--end form group-->
+<!--								<div class="form-group">
+									<label for="name" class="control-label">Address:<font color="grey"></font></label>
+								</div>end form group
 								<div class="form-group">
-									<label for="name" class="control-label">Age:<font color="grey"><%= userDetails.get("page") %></font></label>
-								</div><!--end form group-->
+									<label for="gender" class="control-label">Gender: <font color="grey"></font></label>
+								</div>end form group
 								<div class="form-group">
-									<label for="gender" class="control-label">Gender: <font color="grey"><%= userDetails.get("pgender") %></font></label>
-								</div><!--end form group-->
-								<div class="form-group">
-									<label for="dob" class="control-label">Bloodgroup: <font color="grey"><%= userDetails.get("pbloodgroup") %></font></label>
+									<label for="dob" class="control-label">Bloodgroup: <font color="grey"></font></label>
 								</div>
                                                                 <div class="form-group">
-									<label for="dob" class="control-label">Organ Selected for donation: <font color="grey"><%= userDetails.get("organSelected") %></font></label>
+									<label for="dob" class="control-label">Organ Selected for donation: <font color="grey"></font></label>
+								</div>-->
+                                                                <div class="form-group">
+									<label for="dob" class="control-label">Email: <font color="grey"><%= hospitalProfileDetails.get("email") %></font></label>
 								</div>
                                                                 <div class="form-group">
-									<label for="dob" class="control-label">Email: <font color="grey"><%= userDetails.get("pemail") %></font></label>
-								</div>
-                                                                <div class="form-group">
-									<label for="dob" class="control-label">Mobile: <font color="grey"><%= userDetails.get("pmobile") %></font></label>
+									<label for="dob" class="control-label">Mobile: <font color="grey"><%= hospitalProfileDetails.get("phoneNumber") %></font></label>
 								</div>
                                                                 
 								</div><!--end form group-->
 								<div class="col-lg-10 form-group">
-									<label for="state" class="control-label">Address: <font color="grey"><%= userDetails.get("paddress") %>, <%= userDetails.get("pcity") %>, <%= userDetails.get("pdistrict") %>, <%= userDetails.get("pstate") %>, <%= userDetails.get("pcountry") %></font></label>
+									<label for="state" class="control-label">Address: <font color="grey"><%= hospitalProfileDetails.get("address") %>, <%= hospitalProfileDetails.get("city") %>, <%= hospitalProfileDetails.get("state") %></font></label>
 								</div><!--end form group-->
 								<div class="form-group">
 									<div class="col-lg-10 form-group">

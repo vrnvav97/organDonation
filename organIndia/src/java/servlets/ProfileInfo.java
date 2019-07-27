@@ -28,11 +28,11 @@ public class ProfileInfo extends HttpServlet {
         HashMap userDetails=(HashMap)session.getAttribute("userDetails"); 
         try{
             String e=(String)userDetails.get("email");
-             System.out.println(e+"tthr");
+//             System.out.println(e+"tthr");
             db.DbConnect db=new db.DbConnect();
-            java.util.HashMap userDetails1=db.checkEmail(e);
-            if(userDetails1!=null){
-                session.setAttribute("userDetails", userDetails1);
+            java.util.HashMap profileInfo=db.checkEmailUser(e);
+            if(profileInfo!=null){
+                session.setAttribute("profileInfo", profileInfo);
                 response.sendRedirect("ProfileDashboard.jsp");
             }else{
                 session.setAttribute("msg", "No Entries!");

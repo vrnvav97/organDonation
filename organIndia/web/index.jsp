@@ -122,7 +122,7 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li><a id="home" href="">Home</a></li>
-          <li><a id="becomeADonor" href="#">Become a donor</a></li>
+          <li><a id="becomeADonor" href="index1.jsp">Become a donor</a></li>
 
 
           
@@ -184,8 +184,8 @@
         }
         %>    
           <li><a id="gal" href=<%=href%>><%=m%></a></li>
-        
-<!--          <li><a id="almni" href="#" >About Us</a></li>-->
+        <li><a id="signout" href="Signout"></a></li>
+
         </ul>
       </div>
     </div>
@@ -501,6 +501,7 @@ var myVAR="<%out.print(m);%>";
   </script>
   <script>
       var a = document.getElementById("home");
+      var b = document.getElementById("signout");
       if ("<%=userNameInJs%>"=="")
       {
         a.innerText = "Home";
@@ -508,8 +509,19 @@ var myVAR="<%out.print(m);%>";
     }
       else
       {
+          <%
+          String text = "";
+          HashMap hm =(HashMap) session.getAttribute("userDetails");
+          if (hm.get("designation").equals("user"))
+              text = "dashboard.jsp";
+          else if (hm.get("designation").equals("hospital"))
+              text = "HospitalDashboard.jsp";
+          else
+              text = "Admin.jsp";
+          %>
          a.innerText = "Dashboard";
-         a.setAttribute("href","dashboard.jsp");
+         a.setAttribute("href","<%=text%>");
+         b.innerText = "Sign Out";
      }
         </script>
 </form>

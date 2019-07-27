@@ -19,23 +19,21 @@ import javax.servlet.http.HttpSession;
  *
  * @author Anshuman bhatt
  */
-public class PrevoiusInfo extends HttpServlet {
+public class HospitalProfileInfo extends HttpServlet {
 
   
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
           HttpSession session=request.getSession();
-          
-        HashMap userDetails=(HashMap)session.getAttribute("userDetails");
-
+        HashMap userDetails=(HashMap)session.getAttribute("userDetails"); 
         try{
             String e=(String)userDetails.get("email");
-             System.out.println(e+"tthr");
+//             System.out.println(e+"tthr");
             db.DbConnect db=new db.DbConnect();
-            java.util.HashMap previousInfo=db.checkEmailUser(e);
-            if(previousInfo!=null){
-                session.setAttribute("previousInfo", previousInfo);
-                response.sendRedirect("PreviousDashboard.jsp");
+            java.util.HashMap hospitalProfileInfo=db.checkEmailHospital(e);
+            if(hospitalProfileInfo!=null){
+                session.setAttribute("hospitalProfileInfo", hospitalProfileInfo);
+                response.sendRedirect("HospitalProfileDashboard.jsp");
             }else{
                 session.setAttribute("msg", "No Entries!");
                 response.sendRedirect("indexLogin.jsp");

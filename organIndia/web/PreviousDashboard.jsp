@@ -1,6 +1,6 @@
 <%@page import="java.util.HashMap"%>
 <%
-    HashMap userDetails=(HashMap)session.getAttribute("profileInfo");
+    HashMap userDetails=(HashMap)session.getAttribute("previousInfo");
     if(userDetails!=null){
 %>
 <html lang="en">
@@ -29,12 +29,13 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav navbar-right">
                                     <li><div class="navbar-text"><p>Welcome: <%= userDetails.get("pfirstname") %></p></div></li>
-					<li><a href="index.jsp">Home</a></li>
+					<li><a href="profile.jsp">Home</a></li>
 					<li><a href="Logout.jsp">Logout</a><li>
 				</ul>			
 			</div>
 		</div>
 	</nav>
+                  
 	</br>
 	</br>
 		<div class="container">
@@ -51,11 +52,17 @@
 									<label for="email" class="control-label">Name:<font color="grey"><%= userDetails.get("pfirstname")+" " %><%= userDetails.get("plastname") %> </font></label>
 								</div><!--end form group-->
 								<div class="form-group">
-									<label for="name" class="control-label">Age:<font color="grey"><%= userDetails.get("page") %></font></label>
+									<label for="name" class="control-label">Organ Donated:<font color="grey"><% if(userDetails.get("organdonated")!=null){%>
+                                                                        <%= userDetails.get("organdonated") %>
+                                                                        <%}
+                                                                        else{%>
+                                                                            <%= "No organ donated" %>
+                                                                            <% }%>
+                                                                        </font></label>
 								</div><!--end form group-->
-								<div class="form-group">
+<!--								<div class="form-group">
 									<label for="gender" class="control-label">Gender: <font color="grey"><%= userDetails.get("pgender") %></font></label>
-								</div><!--end form group-->
+								</div>end form group
 								<div class="form-group">
 									<label for="dob" class="control-label">Bloodgroup: <font color="grey"><%= userDetails.get("pbloodgroup") %></font></label>
 								</div>
@@ -69,17 +76,17 @@
 									<label for="dob" class="control-label">Mobile: <font color="grey"><%= userDetails.get("pmobile") %></font></label>
 								</div>
                                                                 
-								</div><!--end form group-->
+								</div>end form group
 								<div class="col-lg-10 form-group">
 									<label for="state" class="control-label">Address: <font color="grey"><%= userDetails.get("paddress") %>, <%= userDetails.get("pcity") %>, <%= userDetails.get("pdistrict") %>, <%= userDetails.get("pstate") %>, <%= userDetails.get("pcountry") %></font></label>
-								</div><!--end form group-->
+								</div>end form group
 								<div class="form-group">
 									<div class="col-lg-10 form-group">
-										<!--<button type="submit" class="btn btn-primary" formaction="editprofile.jsp">Edit Profile</button>-->
+										<button type="submit" class="btn btn-primary" formaction="editprofile.jsp">Edit Profile</button>
 										<button type="submit" class="btn btn-primary" formaction="changepassword.jsp">Change Password</button>
 									</div>		
-								</div>
-</form>
+								</div>-->
+							</form>
 					</div>
 				<div class="col-lg-6">
                                     <%

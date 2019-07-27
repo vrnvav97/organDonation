@@ -20,8 +20,10 @@
   <h1>Dashboard</h1>
   <div class="inner-container">
     <div class="grid-wrapper">
+        <a href="HospitalProfileInfo">
       <div class="grid">
         <div class="grid-header">
+            
           <div class="icon">
             <i class="fa fa-user" aria-hidden="true"></i>
           </div>
@@ -43,6 +45,8 @@
         </div>
 
       </div>
+        </a>
+        <a href="HospitalDepartments">
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -65,6 +69,8 @@
           </div>
         </div>
       </div>
+        </a>
+        <a href="HospitalBeds">
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -87,6 +93,8 @@
           </div>
         </div>
       </div>
+        </a>
+        <a href="">
       <div class="grid">
         <div class="grid-header">
           <div class="icon">
@@ -109,7 +117,7 @@
           </div>
         </div>
       </div>
-
+        </a>
       <!-- 
       <div class="grid user-grid">
         <div class="grid-header">
